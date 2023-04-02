@@ -1,0 +1,393 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
+/* Configurações gerais */
+:root{
+    --azul_escuro: #13334C; 
+    --azul_claro: #006aba;
+    --branco: #F6F6E9;
+    --laranja: #cf5717;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+body, html{
+    background-image: url(../imagens/fundofoda.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Configuração da navbar */
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked ~ nav{
+    transform: translateX(350px);
+    transition: 0.5s;
+}
+input[type="checkbox"]:not(:checked) ~ nav{
+    transition: 1s;
+    transform: translateX(-1200px);
+}
+label#ibotao-menu{
+    top: 13px;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 3;
+}
+label img{
+    position: absolute;
+    top: 20px;
+}
+nav{
+    position: absolute;
+    box-sizing: content-box;
+    width: 100px;
+    height: 790px;
+    left: -370px;
+    padding: 5px 16px 5px 5px;
+    margin: 0 15px 0px 15px;
+    background-color: var(--laranja);
+    z-index: 2;
+}
+div#boneco-fodido{
+    height: 70px;
+    width: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 620px;
+    left: 19px;
+    background: url(../imagens/logo/boneco-estudaja.png);
+}
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: block;
+    padding: 90px 10px;
+    float: left;
+}
+nav a:hover{
+    transition: 0.4s;
+    text-decoration: underline;
+}
+
+/* Demais elementos do cabeçalho */
+header{
+    height: 80px;
+    padding: 15px;
+    border: 1px solid var(--laranja);
+    background-color: var(--laranja);
+}
+a#logo-oficial{
+    position: absolute;
+    top: 23px;
+    left: 80px;
+}
+div#logo{
+    height: 47px;
+    width: 228px;
+    background-image: url(../imagens/logo/logo-oficial-g.png);
+}
+#divBusca{
+    background-color:#ffffff;
+    border:solid 1px;
+    border-radius:15px;
+    width: 300px;
+    height: 35px;
+    position: absolute;
+    top: 35px;
+    left: 885px;
+}
+#txtBusca{
+    float: left;
+    background-color:transparent;
+    padding-left:5px;
+    color: rgb(19, 19, 19);
+    font-size:16px;
+    border:none;
+    height:32px;
+    width:260px;
+}
+#btnBusca{
+    position: absolute;
+    top: 8px;
+}
+div#ilupa{
+    position: absolute;
+    left: 928px;
+    top: 5px;
+    z-index: 1;
+}
+input[type="text"]{
+    cursor: auto;
+}
+div#login-btn{
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 92%;
+    cursor: pointer;
+}
+div#login-btn a{
+    text-decoration: none;
+    position: absolute;
+}
+div#linha{
+    height: 16px;
+    background-color: #aa4d1c;
+}
+
+/* Estilização da tela de login */
+.modal{
+    background-color: rgba(71, 71, 71, 0.719);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 3;
+}
+.conteudo-modal{
+    margin: 0 auto;
+    margin-top: 130px;
+    max-width: 400px;
+    height: 680px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto; 
+}
+.cabecalho-modal{
+    background-color:#cf5717;
+    height: 110px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: solid #af4d18 11px;
+    justify-content: space-between;
+}
+.logo-btn{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 79px;
+}
+.fechar-modal{
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 370px;
+    cursor: pointer;
+}
+.corpo-modal{
+    padding:1px 8px 8px 8px;
+    text-align: center;
+    border-top: 1px solid #Eee;
+}
+.corpo-modal a{
+    color: var(--azul_claro);
+    text-decoration: none;
+}
+.corpo-modal a:hover{
+    text-decoration: underline;
+}
+.login-modal{
+    font-family:'Source Sans Pro',sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-right:3px ;
+    border-bottom: 1px solid #Eee;
+}
+.text-modal{
+    margin-top: 40px;
+}
+.entrar-btn{
+    background-color: #fff;
+    color: #006aba;
+    width: 160px;
+    height: 80px;
+    border: 2px solid #006aba;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-top: 30px;
+}
+.entrar-btn:hover{
+    background-color: #006aba;
+    color: #fff;
+}
+.input-login{
+    position: relative;
+    padding-top: 15px;
+    margin-top: 70px;
+}
+.input-login input{  
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    outline: none;
+    min-width: 180px;
+    font-size: 13px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance: none;
+    border-radius:0;
+}
+.input-login input:focus{
+    border-bottom: 2px solid #3951b2;
+}
+.input-login input::placeholder{
+    color:transparent;
+}
+.input-login label{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 94px;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+}
+.input-login input:focus + label,
+.input-login input:not(:placeholder-shown) + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #3951b2;
+}
+div#area-email{
+    margin-bottom: 15px;
+}
+div#area-senha{
+    margin-top: -5px;
+    margin-bottom: 50px;
+}
+input[type="submit"]{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/* Conteúdo principal */
+/* Slideshow */
+.slider{
+    position: relative;
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.slides{
+    margin-top: 15px;
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+.slide img{
+    max-width: 800px;
+}
+.text{
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    left: 30px;
+    right: 25px;
+    color: white;
+    opacity: 0.9; 
+}
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 1px solid white;
+    padding: 1px;
+    border-radius: 1px;
+    width: 70px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+}
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+.manual-btn:hover{
+    background-color: white;
+}
+#radio1:checked ~ .first {
+    margin-left:0;
+    transition:0.8s ;
+}
+#radio2:checked ~ .first {
+    margin-left:-800px;
+    transition:0.8s ;
+}
+#radio3:checked ~ .first {
+    margin-left:-1600px;
+    transition:0.8s ;
+}
+.navigation-auto div{
+    border: 1px solid #20a6ff ;
+    padding: 1px ;
+    border-radius: 1px;
+    width: 70px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 380px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 20px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: white;
+}
+/* Restante do conteúdo */
+main{
+    background-color: white;
+    box-shadow: 5px 0px rgba(0, 0, 0, 0.300), -5px 0 rgba(0, 0, 0, 0.300);
+    border-radius: 6px;
+    width: 80vw;
+    margin: auto;
+}
+div#espaco-carou{
+    background-color: black;
+}
+/* Rodapé */
+footer{
+    background-color: black;
+    color: white;
+    margin-top: -15px;
+    margin-bottom: -17px;
+}
+

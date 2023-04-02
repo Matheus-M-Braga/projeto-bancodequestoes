@@ -1,0 +1,363 @@
+@charset "UTF-8";
+
+/* Typical device breakpoints */
+/*
+Pequenas Telas: até 600px
+Celulares: 600px até 768px
+Tablets: 768 até 992px
+Desktops: 992px até 1200px
+Grandes Telas: acima de 1200px
+*/
+
+/* Telas menores */
+@media screen and (max-width: 600px){
+    :root{
+        --azul_escuro: #13334C; 
+        --azul_claro: #006aba;
+        --branco: #F6F6E9;
+        --laranja: #cf5717;
+    }
+    /* Alteração da navbar */
+    nav{
+        position: absolute;
+        box-sizing: content-box;
+        width: 100vw;
+        height: 1160px;
+        left: -370px;
+        padding: 5px 16px 5px 5px;
+        margin: 0 15px 0px 15px;
+        background-color: var(--laranja);
+        z-index: 2;
+    }
+    nav a{
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        margin: 35px;
+        display: block;
+        float: left;
+        font-size: 1em;
+    }
+    nav a:hover{
+        transition: 0.4s;
+        text-decoration: underline;
+    }
+    /* Alteração da logo */
+    div#logo{
+        position: absolute;
+        top: 4px;
+        margin-left: -20px;
+        background-repeat: no-repeat;
+        height: 47px;
+        width: 180px;
+        background-image: url(../imagens/logo/logo-oficial-p.png);
+    }
+    /* Alteração da barra de pesquisa */
+    #divBusca{
+        background-color: #ffffff;
+        border: solid 1px;
+        border-radius: 15px;
+        width: 120px;
+        height: 30px;
+        position: absolute;
+        top: 32px;
+        left: 312px;
+    }
+    #txtBusca{
+        float: left;
+        background-color: transparent;
+        padding-left: 5px;
+        color: rgb(19, 19, 19);
+        font-size: 13px;
+        border: none;
+        height: 30px;
+        width: 90px;
+    }
+    #btnBusca{
+        position: absolute;
+        left: 99px;
+        top: 7px;
+    }
+    div#ilupa{
+        position: absolute;
+        z-index: 1;
+    }
+    input[type="text"]{
+        cursor: auto;
+    }
+    /* Alteração do boneco vei */
+    div#login-btn{
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 91.6%;
+    }
+    /* Alteração do slide fodido */
+    .slider{
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+    .slides{
+        margin-top: 15px;
+        width: 400%;
+        height: 400px;
+        display: flex;
+    }
+    .slide{
+        width: 60%;
+    }
+    .slide img{
+        max-width: 100%;
+    }
+    
+}
+
+/* Celulares */
+@media screen and (min-width: 601px) and (max-width: 768px){
+    :root{
+        --azul_escuro: #13334C; 
+        --azul_claro: #006aba;
+        --branco: #F6F6E9;
+        --laranja: #cf5717;
+    }
+    /* Alteração da navbar */
+    nav{
+        position: absolute;
+        box-sizing: content-box;
+        width: 100vw;
+        height: 1160px;
+        left: -370px;
+        padding: 5px 16px 5px 5px;
+        margin: 0 15px 0px 15px;
+        background-color: var(--laranja);
+        z-index: 2;
+    }
+    nav a{
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        margin: 45px;
+        display: block;
+        float: left;
+        font-size: 1em;
+    }
+    nav a:hover{
+        transition: 0.4s;
+        text-decoration: underline;
+    }
+    /* Alteração da logo */
+    div#logo{
+        position: absolute;
+        top: 4px;
+        margin-left: -20px;
+        background-repeat: no-repeat;
+        height: 47px;
+        width: 180px;
+        background-image: url(../imagens/logo/logo-oficial-p.png);
+    }
+    /* Alteração da barra de pesquisa */
+    #divBusca{
+        background-color: #ffffff;
+        border: solid 1px;
+        border-radius: 15px;
+        width: 150px;
+        height: 30px;
+        position: absolute;
+        top: 32px;
+        left: 375px;
+    }
+    #txtBusca{
+        float: left;
+        background-color: transparent;
+        padding-left: 5px;
+        color: rgb(19, 19, 19);
+        font-size: 13px;
+        border: none;
+        height: 30px;
+        width: 90px;
+    }
+    #btnBusca{
+        position: absolute;
+        left: 125px;
+        top: 7px;
+    }
+    div#ilupa{
+        position: absolute;
+        z-index: 1;
+    }
+    input[type="text"]{
+        cursor: auto;
+    }
+    /* Alteração do boneco vei */
+    div#login-btn{
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 90%;
+    }
+    /* Alteração do slide fodido */
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 992px){
+    main{
+        background-color: blue;
+    }
+    :root{
+        --azul_escuro: #13334C; 
+        --azul_claro: #006aba;
+        --branco: #F6F6E9;
+        --laranja: #cf5717;
+    }
+    /* Alteração da navbar */
+    nav{
+        position: absolute;
+        box-sizing: content-box;
+        width: 90px;
+        height: 881px;
+        left: -370px;
+        padding: 5px 16px 5px 5px;
+        background-color: var(--laranja);
+        z-index: 2;
+    }
+    /* Alteração da logo */
+    div#logo{
+        position: absolute;
+        top: 4px;
+        margin-left: -20px;
+        background-repeat: no-repeat;
+        height: 47px;
+        width: 227px;
+        background-image: url(../imagens/logo/logo-oficial-g.png);
+    }
+    /* Alteração da barra de pesquisa */
+    #divBusca{
+        background-color: #ffffff;
+        border: solid 1px;
+        border-radius: 15px;
+        width: 150px;
+        height: 30px;
+        position: absolute;
+        top: 32px;
+        left: 575px;
+    }
+    #txtBusca{
+        float: left;
+        background-color: transparent;
+        padding-left: 5px;
+        color: rgb(19, 19, 19);
+        font-size: 13px;
+        border: none;
+        height: 30px;
+        width: 90px;
+    }
+    #btnBusca{
+        position: absolute;
+        left: 125px;
+        top: 7px;
+    }
+    div#ilupa{
+        position: absolute;
+        z-index: 1;
+    }
+    input[type="text"]{
+        cursor: auto;
+    }
+    /* Alteração do boneco vei */
+    div#login-btn{
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 90%;
+    }
+    /* Alteração do slide fodido */
+}
+/* outra */
+@media screen and (min-width: 993px) and (max-width: 1299px){
+    :root{
+        --azul_escuro: #13334C; 
+        --azul_claro: #006aba;
+        --branco: #F6F6E9;
+        --laranja: #cf5717;
+    }
+    main{
+        background-color: pink;
+    }
+    /* Alteração da navbar */
+    nav{
+        position: absolute;
+        box-sizing: content-box;
+        width: 100px;
+        height: 881px;
+        left: -370px;
+        padding: 5px 16px 5px 5px;
+        background-color: var(--laranja);
+        z-index: 2;
+    }
+    /* Alteração da logo */
+    div#logo{
+        position: absolute;
+        top: 4px;
+        margin-left: -20px;
+        background-repeat: no-repeat;
+        height: 47px;
+        width: 227px;
+        background-image: url(../imagens/logo/logo-oficial-g.png);
+    }
+    /* Alteração da barra de pesquisa */
+    #divBusca{
+        background-color:#ffffff;
+        border:solid 1px;
+        border-radius:15px;
+        width: 300px;
+        height: 30px;
+        position: absolute;
+        top: 30px;
+        left: 710px;
+    }
+    #txtBusca{
+        float: left;
+        background-color: transparent;
+        padding-left: 5px;
+        color: rgb(19, 19, 19);
+        font-size: 16px;
+        border: none;
+        height: 30px;
+        width: 90px;
+    }
+    #btnBusca{
+        position: absolute;
+        left: 272px;
+        top: 7px;
+    }
+    div#ilupa{
+        position: absolute;
+        z-index: 1;
+    }
+    input[type="text"]{
+        cursor: auto;
+    }
+    /* Alteração do boneco vei */
+    div#login-btn{
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 90%;
+    }
+    /* Alteração do slide fodido */
+}
+/* Desktops HD */
+@media screen and (min-width: 1300px) and (max-width: 1799px){
+    main{
+        background-color: green;
+    }
+}
+
+/* Desktops Full HD */
+@media screen and (min-width: 1800px){
+
+}
