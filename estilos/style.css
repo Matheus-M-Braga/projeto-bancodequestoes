@@ -3,10 +3,11 @@
 
 /* Configurações gerais */
 :root{
-    --azul_escuro: #13334C; 
-    --azul_claro: #006aba;
-    --branco: #F6F6E9;
-    --laranja: #cf5717;
+    --azul_escuro: rgb(19, 51, 76); 
+    --azul_claro: rgb(0, 106, 186);
+    --branco: rgb(246, 246, 233);
+    --laranja: rgb(207, 87, 23);
+    --laranja-claro: rgb(255, 112, 35);
 }
 *{
     font-family: Arial, Helvetica, sans-serif;
@@ -25,7 +26,14 @@ body, html{
     background-size: cover;
     height: 100vh;
 }
-
+a{
+    text-decoration: none;
+    color: var(--azul_claro);
+}
+a:hover{
+    transition: 0.5s;
+    text-decoration: underline;
+}
 /* Configuração da navbar */
 input[type="checkbox"]{
     display: none;
@@ -52,13 +60,40 @@ label img{
 nav{
     position: absolute;
     box-sizing: content-box;
-    width: 100px;
-    height: 790px;
+    width: 115px;
+    height: 994px;
     left: -370px;
-    padding: 5px 16px 5px 5px;
     margin: 0 15px 0px 15px;
-    background-color: var(--laranja);
     z-index: 2;
+    border: none; 
+    background-color: var(--laranja);
+}
+nav div#links-nav{
+    margin-top: 150px;
+}
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 140px;
+    margin-left: 5px;
+    padding: 5px;
+    float: left;
+}
+nav a:hover{
+    transition: 0.6s;
+    width: 100px;
+    height: fit-content;
+    background-color: rgba(0, 105, 186, 0.640);
+    border-radius: 5px;
+    text-decoration: none;
+}
+div#linha-nav{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin-top: 650px;
 }
 div#boneco-fodido{
     height: 70px;
@@ -66,23 +101,11 @@ div#boneco-fodido{
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+    margin-top: 50px;
     top: 620px;
     left: 19px;
     background: url(../imagens/logo/boneco-estudaja.png);
 }
-nav a{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    display: block;
-    padding: 90px 10px;
-    float: left;
-}
-nav a:hover{
-    transition: 0.4s;
-    text-decoration: underline;
-}
-
 /* Demais elementos do cabeçalho */
 header{
     height: 80px;
@@ -278,99 +301,48 @@ input[type="submit"]{
 }
 /* Conteúdo principal */
 /* Slideshow */
+.container-slider{
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.container-images{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1500px;
+    height: 710px;
+    margin-top: -80px;
+    margin-bottom: -80px;
+}
 .slider{
-    position: relative;
-    margin: 0 auto;
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-.slides{
-    margin-top: 15px;
-    width: 400%;
-    height: 400px;
-    display: flex;
-}
-.slides input{
-    display: none;
-}
-.slide{
-    width: 25%;
-    position: relative;
-}
-.slide img{
-    max-width: 800px;
-}
-.text{
+    opacity: 0;
+    transition:0.3s;
     position: absolute;
-    text-align: center;
-    bottom: 30px;
-    left: 30px;
-    right: 25px;
-    color: white;
-    opacity: 0.9; 
+    width: 100%;
+    border-radius: 10px;
 }
-.manual-navigation{
-    position: absolute;
-    width: 800px;
-    margin-top: -20px;
-    display: flex;
-    justify-content: center;
+.on{
+    opacity: 1;
 }
-.manual-btn{
-    border: 1px solid white;
-    padding: 1px;
-    border-radius: 1px;
+#prev-button, #next-button{ 
     width: 70px;
+    height: 70px;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    transition: 0.5s;
-    position: relative;
 }
-.manual-btn:not(:last-child){
-    margin-right: 20px;
+#prev-button img, #next-button img{
+    width: 80%;
+    height: 80%;
 }
-.manual-btn:hover{
-    background-color: white;
-}
-#radio1:checked ~ .first {
-    margin-left:0;
-    transition:0.8s ;
-}
-#radio2:checked ~ .first {
-    margin-left:-800px;
-    transition:0.8s ;
-}
-#radio3:checked ~ .first {
-    margin-left:-1600px;
-    transition:0.8s ;
-}
-.navigation-auto div{
-    border: 1px solid #20a6ff ;
-    padding: 1px ;
-    border-radius: 1px;
-    width: 70px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.navigation-auto{
-    position: absolute;
-    width: 800px;
-    margin-top: 380px;
-    display: flex;
-    justify-content: center;
-}
-.navigation-auto div:not(:last-child){
-    margin-right: 20px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: white;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: white;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: white;
+#prev-button{
+    transform: rotate(180deg);
 }
 /* Restante do conteúdo */
 main{
@@ -378,16 +350,85 @@ main{
     box-shadow: 5px 0px rgba(0, 0, 0, 0.300), -5px 0 rgba(0, 0, 0, 0.300);
     border-radius: 6px;
     width: 80vw;
-    margin: auto;
+    margin: 0 auto;
 }
 div#espaco-carou{
     background-color: black;
 }
+main h1{
+    font-size: 35px;
+    padding: 10px;
+    text-indent: 20px;
+}
+main p{
+    font-size: 18px;
+    padding: 10px 10px 17px 10px;
+    text-indent: 20px;
+
+}
 /* Rodapé */
 footer{
+    background-color: var(--laranja);
+    color: black;
+    border: none;
+}
+footer div#linha2{
+    height: 16px;
+    background-color: #aa4d1c;
+    border: none;
+}
+footer img{
+    margin-left: 55px;
+}
+footer div#bocnecorp{
+    position: absolute;
+    display: inline-block;
+}
+footer hr{
+    width: 102px;
+    margin-bottom: 10px;
     background-color: black;
-    color: white;
-    margin-top: -15px;
-    margin-bottom: -17px;
+    color: black;
+    height: 1px;
+    border: 0;
+}
+strong#suporte{
+    margin-left: -2px;
+    margin-bottom: 35px;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: fit-content;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer p#frasef{
+    padding: 7px 7px 1px 7px;
+    text-align: center;
+}
+footer div#linharp{
+    border: black;
+    background-color: black;
+    color: black;
+    height: 1px;
+    width: 100%;
+}
+footer div#blocos{
+    width: 900px;
+    display: inline-block;
+}
+footer div#coluna1{
+    width: 50%;
+    padding: 10px;
+    margin-left: 300px;
+}
+footer div#coluna2{
+    width: 50%;
+    padding: 10px;  
+    margin-left: 670px;
+    margin-top: -103px;
 }
 
