@@ -1,58 +1,122 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <link rel="shortcut icon" href="imagens/icones/favicon.ico" type="image/x-icon">
     <title>Estuda.ja</title>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
     <!-- Área de navegção -->
     <input type="checkbox" id="ibotao">
-    <label for="ibotao">
-       <img src="imagens/menu.png" alt="menu">
+    <label for="ibotao" id="ibotao-menu">
+       <img src="imagens/icones/menu.png" alt="menu">
     </label>
     <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="institucional.html">Institucional</a></li>
-            <li><a href="duvidas.html">Dúvidas</a></li>
-        </ul>
+      <div id="links-nav">
+        <a href="index.html">Início</a>
+        <a href="institucional.html">Institucional</a>
+        <a href="duvidas.html">Dúvidas</a>
+      </div>
+      <div id="linha-nav"></div>
+      <div id="boneco-fodido"></div>
     </nav>
     <!-- Demais elementos do Cabeçalho -->
     <header>
-        <a href="#" id="logo-oficial"><img src="imagens/Logo(oficial)menor.png" alt="logo"></a>
+        <a href="#" id="logo-oficial">
+          <div id="logo">
+          </div>
+        </a>
             <div id="divBusca">
                 <input aria-selected="false" type="text" id="txtBusca" placeholder="Pesquisar..."/>
-                <button><img src="imagens/lupa2.png" id="btnBusca" alt="Buscar"/></button>
+                <img src="imagens/icones/lupa2.png" id="btnBusca" alt="Buscar">
             </div>
-        <div id="login-btn"><a href="login.html"><img id="login" src="imagens/login.png" alt="login"></a></div>
+        <div id="login-btn" onclick="abrirModal('vis-modal')">
+            <abbr title="Login/Cadastro"><img id="login" src="imagens/icones/user.png" alt="login"></abbr>
+        </div>
     </header>
     <div id="linha"></div>
+    <!-- Telinha de login/cadastro -->
+    <div id="vis-modal" class="modal">
+      <div class="conteudo-modal">
+          <div class="cabecalho-modal">
+              <img src="Imagens/icones/fechar.png" alt="butão-fechar" class="fechar-modal" onclick="fecharModal('vis-modal')">
+              <img src="Imagens/icones/Logo(oficial)menor.png" alt="logo" class="logo-btn">
+          </div>
+          <div class="corpo-modal">
+            <form action="">
+              <p class="login-modal">LOGIN:</p>
+              <div class="input-login" id="area-email">
+                <input type="text" placeholder=" " name="email" required>
+                <label for="email">E-mail:</label>
+              </div>
+              <br>
+              <div class="input-login" id="area-senha">
+                <input type="password" placeholder=" " name="senha" required>
+                <label for="senha">Senha:</label>
+              </div>
+                <p>Login como:</p>
+                <input type="radio" name="pessoa" id="pessoa00" checked class="radiobt"><label for="pessoa">Professor</label>
+                <input type="radio" name="pessoa" id="pessoa01"><label for="pessoa">Aluno</label>
+                <br>
+                <input type="submit" value="ENTRAR" class="entrar-btn">
+              </form>
+              <p><a href="skpakspa.html">Esqueceu a senha?</a></p>
+              <br>
+              <p>É novo por aqui? <a href="sla.html">Cadastre-se</a></p>
+          </div>
+      </div>
+  </div>
     <!-- Container do conteúdo principal -->
     <main>
         <!-- Carrossel kkkkkk -->
-
+        <div class="container-slider">
+          <button id="prev-button"><img src="imagens/imgs-slide/pngwing.com.png" alt="prev-button"></button>
+          <div class="container-images">
+              <img src="imagens/imgs-slide/master-of-puppets.png" alt="girl" class="slider on">
+            <img src="imagens/imgs-slide/Ednaldo.jpg" alt="girl" class="slider">
+            <img src="imagens/imgs-slide/SamuraiAngolano.jpg" alt="" class="slider">
+          </div>
+          <button id="next-button"><img src="imagens/imgs-slide/pngwing.com.png" alt="next-button"></button>
+        </div>
         <!-- Texto -->
-        <h1>Titulo</h1>
-        <h2>SubTitulo</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sint nemo voluptatibus quas, maiores asperiores facilis ratione, similique quidem ducimus voluptatum exercitationem optio deserunt ipsum sunt at cupiditate culpa hic! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dicta odit sit quo, officia, nam quas reprehenderit et, adipisci iusto aliquid. Omnis quisquam repudiandae nisi officia numquam, delectus animi. Optio!
-        </p>
-        <h2>SubTitulo</h2>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, ipsam voluptas totam fuga officiis harum qui possimus provident iure voluptatum ab voluptates labore temporibus. Sit qui error officiis asperiores eum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quia officiis. Mollitia temporibus sit ratione eius, dolor illum distinctio alias, officia optio ducimus saepe dolorum, debitis numquam laudantium totam magni.
-        </p>
+        <h1>Olá, caro usuário</h1>
+
+        <p>Inicialmente, seja muito bem-vindo ao nosso ambiente de estudos. Aqui, você poderá adquirir, desenvolver, ampliar e avaliar os seus conhecimentos como desejar. Faça seu <a href="#" onclick="abrirModal('vis-modal')">Login</a> ou se é novo por aqui, <a href="#" onclick="abrirModal('vis-modal')">Cadastre-se</a>.</p>
+
+        <p>O site oferecerá um conjunto de ferramentas necessárias no qual você, que esteja cadastrado como aluno, poderá fazer da sua experiência a mais proveitosa possivel, acompanhando seu progresso de aprendizado e melhorando conhecimentos.</p>
+
+        <p>Para você que será um usuário professor, reservamos ferramentas que lhe auxilie a gerenciar e trabalhar de uma maneira agradável.</p>
+
+        <p>Nós, da equipe <strong>Estuda.Já</strong>, agradecemos a sua preferência pelo que podemos oferecer em nosso site.</p>
     </main>
     <!-- Rodapé -->
     <footer>
-
+        <div id="linha2"></div>
+        <img src="imagens/logo/boneco-estudaja.png" alt="boneco-estudaja">
+        <div id="blocos">
+          <div id="coluna1">
+            <strong class="titulo">Início</strong>
+            <hr>
+            <a href="index.html">Home</a>
+            <a href="institucional.html">Institucional</a>
+            <a href="duvidas.html">Dúvidas</a>
+          </div>
+          <div id="coluna2">
+            <strong class="titulo" id="suporte">Suporte</strong>
+            <hr>
+            <a href="duvidas.html">FAQ</a>
+            <a href="email.html.html">E-mail</a>
+            <a href="duvidas.html">Chat</a>
+          </div>
+        </div>
+        <div id="linharp"></div>
+        <p id="frasef">© 2023 Copyright - TechnoLords</p>
     </footer>
+    <!-- Área de scripts -->
+    <script src="JS/javascript.js"></script>
 </body>
 </html>
