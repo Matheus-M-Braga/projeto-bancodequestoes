@@ -2,19 +2,192 @@
 
 /* Celular */
 @media screen and (max-width: 768px){
-
+    main{
+        background-color: darkred;
+    }
+    /* header */
+    /* Searchbar */
+    #divBusca{
+        width: 180px;
+        height: 30px;
+        position: absolute;
+        top: 35px;
+        left: 65%;
+    }
+    #btnBusca{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    #txtbusca{
+        padding-bottom: 3px;
+        width: 150px;
+    }
+    /* Navbar */
+    nav#linha{
+        width: 110%;
+        text-align: center;
+    }
+    nav#linha a{
+        padding: 1px;
+        margin-left: -6px;
+    }
+    /* Slideshow */
+    .container-images{
+        height: 390px;
+        margin-bottom: -8px;
+    }
+    /* Rodapé */
+    ul{
+        margin-left: 300px;
+    }
 }
 
 /* Tablet */
-@media screen and (max-width: 1024px){
-    
-}
-/* Desktop ful-hd*/
-@media screen and (min-width: 1900px) and (max-width: 200px){
-
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    main{
+        background-color: burlywood;
+    }
+    /* Cabeçalho */
+    header{
+        padding: 8px;
+    }
+    div#logo{
+        margin-top: 20px;
+        width: 180px;
+        height: 37px;
+        background-image: url(../imagens/logo/logo-oficial-p.png);
+    }
+    /* Searchbar */
+    #divBusca{
+        width: 180px;
+        height: 28px;
+        position: absolute;
+        top: 35px;
+        left: 67%;
+    }
+    #btnBusca{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    #txtbusca{
+        padding-bottom: 5px;
+    }
+    /* Slideshow */
+    .container-images{
+        height: 428px;
+        margin-bottom: -8px;
+    }
+    /* Rodapé */
+    ul{
+        margin-left: 400px;
+    }
 }
 
 /* Telas maiores */
-@media screen and (min-width: 2001px){
-
+@media screen and (min-width: 1367px) and (max-width: 2001px){
+    /* Cabeçalho */
+    nav#linha{
+        height: fit-content;
+        padding: 10px;
+        width: 100%;
+        background-color: #aa4d1c;
+        text-align: center;
+    }
+    nav a{
+        text-decoration: none;
+        display: inline;
+        font-size: 19px;
+        margin: 0 200px;
+        color: white;
+        padding: 8px;
+    }
+    nav a:hover{
+        text-decoration: none;
+        background-color: rgba(228, 92, 2, 0.678);
+        height: 20px;
+        width: 200px;
+        border-radius: 6px;
+    }
+    /* Modal */
+    .container-slider{    
+        display: flex;
+        width: 100%;
+        min-height: 800px;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .conteudo-modal{
+        height: 680px;
+    }
+    .cabecalho-modal{
+        margin-top: 80px;
+    }
+    /* Botão Login */
+    div#login-btn{
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: -970px;
+        cursor: pointer;
+    }
+    .container-images{
+        margin-top: -60px;
+    }
+    .conteudo-modal{
+        height: 660px;
+    }
+    input[type="submit"]{
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    input[type="radio" ]#pessoa00{
+    margin-left: -15px;
+    }
+    input[type="radio" ]{
+        margin-top: 10px;
+    }
+    /* Searchbar */
+    #divBusca{
+        background-color:#ffffff;
+        border:solid 1px;
+        border-radius:15px;
+        width: 300px;
+        height: 35px;
+        position: absolute;
+        top: 35px;
+        left: 70%;
+    }
+    /*   */
+    /* Rodapé */
+    footer{
+        height: fit-content;
+        font-size: 19px;
+    }
+    picture{
+        margin-left: 40px;
+    }    
+    picture img{
+        position: fixed;
+        height: 98px;
+        width: 550px;
+    }
+    ul{
+        columns: 2;
+        list-style: none;
+        font-size: 17px;
+        padding-left: 35px;
+        margin-left: 720px;
+        width: 700px;
+        height: 108px;
+    }
+    footer div#linharp{
+        border: black;
+        background-color: black;
+        color: black;
+        height: 1px;
+        width: 100%;
+    }
 }

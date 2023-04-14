@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1200px) and (max-width: 1500px){
+    /* Cabeçalho */
+    .form-header{
+        margin-bottom: 0.4rem;
+    }
+    .login-button {
+        display: flex;
+        align-items: center;
+    }
+    .login-button button {
+        border: none;
+        background-color: #cf5717;
+        padding: 0.2rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /* Inputs */
+    .container{
+        width: 80.5%;
+    }
+    .form{
+        width: 60%;
+    }
+    .form-image{
+        width: 40%;
+    }
+    .form-image img{
+        width: 100%;
+    }
+}

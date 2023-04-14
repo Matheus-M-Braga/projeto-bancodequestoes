@@ -19,12 +19,13 @@ input:focus{
     box-shadow: 0 0 0 0;
     outline: 0;
 }
+
 body, html{
     background-image: url(../imagens/fundofoda.jpg);
     font-family: Arial, Helvetica, sans-serif;
-    background-position: center center;
     background-size: cover;
-    height: 100vh;
+    overflow-x: hidden;
+
 }
 a{
     text-decoration: none;
@@ -34,100 +35,29 @@ a:hover{
     transition: 0.5s;
     text-decoration: underline;
 }
-/* Configuração da navbar */
-input[type="checkbox"]{
-    display: none;
-}
-input[type="checkbox"]:checked ~ nav{
-    transform: translateX(350px);
-    transition: 0.5s;
-}
-input[type="checkbox"]:not(:checked) ~ nav{
-    transition: 1s;
-    transform: translateX(-1200px);
-}
-label#ibotao-menu{
-    top: 13px;
-    cursor: pointer;
-    padding: 15px;
-    position: absolute;
-    z-index: 3;
-}
-label img{
-    position: absolute;
-    top: 20px;
-}
-nav{
-    position: absolute;
-    box-sizing: content-box;
-    width: 115px;
-    height: 994px;
-    left: -370px;
-    margin: 0 15px 0px 15px;
-    z-index: 2;
-    border: none; 
-    background-color: var(--laranja);
-}
-nav div#links-nav{
-    margin-top: 150px;
-}
-nav a{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    display: block;
-    margin-bottom: 140px;
-    margin-left: 5px;
-    padding: 5px;
-    float: left;
-}
-nav a:hover{
-    transition: 0.6s;
-    width: 100px;
-    height: fit-content;
-    background-color: rgba(0, 105, 186, 0.640);
-    border-radius: 5px;
-    text-decoration: none;
-}
-div#linha-nav{
-    height: 1px;
-    width: 100%;
-    background-color: black;
-    margin-top: 650px;
-}
-div#boneco-fodido{
-    height: 70px;
-    width: 90px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    margin-top: 50px;
-    top: 620px;
-    left: 19px;
-    background: url(../imagens/logo/boneco-estudaja.png);
-}
+
 /* Demais elementos do cabeçalho */
 header{
     height: 80px;
-    padding: 15px;
+    padding: 13px;
     border: 1px solid var(--laranja);
     background-color: var(--laranja);
 }
-a#logo-oficial{
-    position: absolute;
-    top: 23px;
-    left: 80px;
-}
 div#logo{
+    margin-top: 10px;
     height: 47px;
     width: 228px;
     background-image: url(../imagens/logo/logo-oficial-g.png);
 }
+a#logo-oficial{
+    height: 61px;
+    width: 301px;
+}
 #divBusca{
     background-color:#ffffff;
-    border:solid 1px;
+    border: 1px solid black;
     border-radius:15px;
-    width: 300px;
+    width: 286px;
     height: 35px;
     position: absolute;
     top: 35px;
@@ -141,18 +71,13 @@ div#logo{
     font-size:16px;
     border:none;
     height:32px;
-    width:260px;
+    width: 260px;
 }
 #btnBusca{
     position: absolute;
     top: 8px;
 }
-div#ilupa{
-    position: absolute;
-    left: 928px;
-    top: 5px;
-    z-index: 1;
-}
+
 input[type="text"]{
     cursor: auto;
 }
@@ -167,11 +92,28 @@ div#login-btn a{
     text-decoration: none;
     position: absolute;
 }
-div#linha{
-    height: 16px;
+nav#linha{
+    height: fit-content;
+    padding: 10px;
+    width: 100%;
     background-color: #aa4d1c;
+    text-align: center;
 }
-
+nav a{
+    text-decoration: none;
+    display: inline;
+    font-size: 18px;
+    margin: 0 100px;
+    color: white;
+    padding: 8px;
+}
+nav a:hover{
+    text-decoration: none;
+    background-color: rgba(228, 92, 2, 0.678);
+    height: 20px;
+    width: 200px;
+    border-radius: 6px;
+}
 /* Estilização da tela de login */
 .modal{
     background-color: rgba(71, 71, 71, 0.719);
@@ -186,9 +128,9 @@ div#linha{
 }
 .conteudo-modal{
     margin: 0 auto;
-    margin-top: 130px;
+    margin-top: 120px;
     max-width: 400px;
-    height: 680px;
+    height: 600px;
     background-color: #fff;
     border-radius: 10px;
     margin: auto; 
@@ -196,6 +138,7 @@ div#linha{
 .cabecalho-modal{
     background-color:#cf5717;
     height: 110px;
+    margin-top: 35px;
     border-radius: 10px 10px 0px 0px;
     border-bottom: solid #af4d18 11px;
     justify-content: space-between;
@@ -243,7 +186,7 @@ div#linha{
     cursor: pointer;
     font-size: 15px;
     transition: 0.4s;
-    margin-top: 30px;
+    margin-bottom: 80px;
 }
 .entrar-btn:hover{
     background-color: #006aba;
@@ -307,8 +250,7 @@ input[type="submit"]{
     min-height: 100px;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    
+    gap: 1px;
 }
 .container-images{
     position: relative;
@@ -316,9 +258,8 @@ input[type="submit"]{
     align-items: center;
     justify-content: center;
     width: 1500px;
-    height: 710px;
-    margin-top: -80px;
-    margin-bottom: -80px;
+    height: 640px;
+    margin-bottom: -20px;
 }
 .slider{
     opacity: 0;
@@ -352,49 +293,56 @@ main{
     width: 80vw;
     margin: 0 auto;
 }
-div#espaco-carou{
-    background-color: black;
-}
 main h1{
     font-size: 35px;
-    padding: 10px;
+    padding: 2px 10px 10px 10px;
     text-indent: 20px;
 }
 main p{
     font-size: 18px;
     padding: 10px 10px 17px 10px;
     text-indent: 20px;
-
 }
 /* Rodapé */
 footer{
     background-color: var(--laranja);
     color: black;
     border: none;
+    height: fit-content;
+    font-size: 16px;
 }
 footer div#linha2{
     height: 16px;
     background-color: #aa4d1c;
     border: none;
 }
-footer img{
-    margin-left: 55px;
+footer picture{
+    margin-left: 40px;
 }
-footer div#bocnecorp{
+footer picture img{
+    width: 300px;
+    padding-top: 10px;
     position: absolute;
-    display: inline-block;
 }
-footer hr{
-    width: 102px;
-    margin-bottom: 10px;
-    background-color: black;
-    color: black;
-    height: 1px;
-    border: 0;
+ul{
+    columns: 2;
+    list-style: none;
+    font-size: 17px;
+    padding-left: 60px;
+    padding-right: 40px;
+    margin-left: 500px;
+    width: 500px;
 }
 strong#suporte{
     margin-left: -2px;
     margin-bottom: 35px;
+}
+footer hr{
+    margin-left: 20px;
+    width: 100px;
+    color: black;
+    border: none;
+    height: 2px;
 }
 footer a{
     text-decoration: none;
@@ -416,19 +364,21 @@ footer div#linharp{
     height: 1px;
     width: 100%;
 }
-footer div#blocos{
-    width: 900px;
+
+/* Áreas de configurações específicas */
+
+/* Dúvidas */
+div#coluna1{
+    margin-right: 50px;
+    margin-left: 15px
+}
+div#coluna2{
+    margin-left: 860px;
+}
+div#coluna1, div#coluna2{
+    margin-top: 20px;
+    text-indent: 15px;
+    height: 300px;
+    width: 300px;
     display: inline-block;
 }
-footer div#coluna1{
-    width: 50%;
-    padding: 10px;
-    margin-left: 300px;
-}
-footer div#coluna2{
-    width: 50%;
-    padding: 10px;  
-    margin-left: 670px;
-    margin-top: -103px;
-}
-
