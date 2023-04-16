@@ -1,18 +1,24 @@
 @charset "UTF-8";
 
 /* Celular */
-@media screen and (max-width: 669px){
+@media screen and (max-width: 720px){
     main{
         background-color: darkred;
     }
     /* header */
+    div#logo{
+        margin-top: 20px;
+        height: 37px;
+        width: 180px;
+        background-image: url(../imagens/logo/logo-oficial-p.png);
+    }
     /* Searchbar */
     #divBusca{
         width: 180px;
         height: 30px;
         position: absolute;
         top: 35px;
-        left: 65%;
+        left: 240px;
     }
     #btnBusca{
         position: absolute;
@@ -44,7 +50,7 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 670px) and (max-width: 1024px){
+@media screen and (min-width: 721px) and (max-width: 1024px){
     main{
         background-color: burlywood;
     }
