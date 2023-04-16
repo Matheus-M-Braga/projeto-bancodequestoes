@@ -31,21 +31,38 @@
     }
     /* Navbar */
     nav#linha{
-        width: 110%;
-        text-align: center;
+        width: 100%;
+        padding-left: 65px;
     }
     nav#linha a{
         padding: 1px;
-        margin-left: -6px;
+        margin: 0 10px 0px 13px;
     }
     /* Slideshow */
     .container-images{
         height: 390px;
-        margin-bottom: -8px;
     }
     /* Rodapé */
     ul{
-        margin-left: 300px;
+        position: relative;
+        margin-left: 200px;
+        columns: 2;
+        list-style: none;
+        font-size: 17px;
+        padding-left: 60px;
+        padding-right: 45px;
+        margin-left: 145px;
+        width: 300px;
+    }
+    footer picture{
+        width: 200px;
+        height: 40px;
+    }
+    footer picture img{
+        width: 120px;
+        height: 50px;
+        padding-top: 25px;
+        padding-left: -10px;
     }
 }
 
@@ -139,10 +156,6 @@
         right: -970px;
         cursor: pointer;
     }
-    .container-images{
-       
-    }
-
     .conteudo-modal{
         height: 660px;
     }

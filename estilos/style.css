@@ -24,7 +24,6 @@ body, html{
     background-image: url(../imagens/fundofoda.jpg);
     background-size: cover;
     overflow-x: hidden;
-    width: 100%;
 }
 a{
     text-decoration: none;
@@ -152,7 +151,7 @@ nav a:hover{
     cursor: pointer;
 }
 .corpo-modal{
-    padding:1px 8px 8px 8px;
+    padding: 8px 8px 8px 8px;
     text-align: center;
     border-top: 1px solid #Eee;
 }
@@ -170,11 +169,12 @@ nav a:hover{
     font-family:'Source Sans Pro',sans-serif;
     font-size: 30px;
     text-align: center;
-    margin-right:3px ;
+    margin-right: 3px;
     border-bottom: 1px solid #Eee;
+    margin-bottom: -300px;
 }
 .text-modal{
-    margin-top: 40px;
+    margin-top: -10px;
 }
 .entrar-btn{
     background-color: #fff;
