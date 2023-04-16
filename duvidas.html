@@ -12,7 +12,7 @@
 <body>
       <!-- Cabeçalho -->
       <header>
-        <a href="#" id="logo-oficial">
+        <a href="index.html" id="logo-oficial">
           <div id="logo">
           </div>
         </a>
@@ -28,6 +28,7 @@
             <a href="index.html">Início</a>
             <a href="institucional.html">Institucional</a>
             <a href="duvidas.html">Dúvidas</a>
+            <a href="" onclick="aviso()">Provas</a>
       </nav>
       <!-- Telinha de login/cadastro -->
       <div id="vis-modal" class="modal">
@@ -37,7 +38,7 @@
                 <img src="Imagens/icones/Logo(oficial)menor.png" alt="logo" class="logo-btn">
             </div>
             <div class="corpo-modal">
-              <form action="">
+              <form action="" method="post">
                 <p class="login-modal">LOGIN:</p>
                 <div class="input-login" id="area-email">
                   <input type="text" placeholder=" " name="email" required>
@@ -53,33 +54,22 @@
                   <input type="radio" name="pessoa" id="pessoa01" class="radiobt"><label for="pessoa">Aluno</label>
                   <br>
                   <input type="submit" value="ENTRAR" class="entrar-btn">
-                </form>
+              </form>
               
                 <p><a href="skpakspa.html">Esqueceu a senha?</a></p>
                 <br>
-                <p>É novo por aqui? <a href="">Cadastre-se</a></p>
+                <p>É novo por aqui? <a href="cadastro00.html">Cadastre-se</a></p>
             </div>
         </div>
         </div>
-        1.Como alterar configurações de usúario?
-   Através do acesso a aba editar perfil,o usuário poderá realizar as devidas mudanças nos dados que achar necessário.Isso não afetará o login da respectiva conta utilizada como também o uso de ferramentas no site.
-
-2. Quantas matérias um professor pode ter?
-    Um usuário professor poderá ter disponível quantas matérias desejar.Ele poderá adicionar novas matérias ao longo do uso do site,necessitando apenas dos dados de login necessários.
-
-3. Como cadastrar novas questões?
-   Acessando a aba de provas o usuário professor terá disponível as avaliações já criadas, podendo então para cada prova adicionar novas questões.Ele terá disponível somente o repertório de questões da sua área de ensino.
-
-4. Como ter acesso as informações dos alunos?
-   Essa é uma ferramenta disponível somente ao usuário professor.Este,deverá inserir suas informações de login como email,senha de email, cpf e código de turma necessárias na aba minha turma.
       <!-- Container do conteúdo principal -->
     <main>
-      <h1>Dúvidas</h1> 
+      <h1 id="tituloduv">Dúvidas</h1> 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, officia repellat possimus odio quas unde tenetur provident sint eveniet quia voluptas aspernatur molestias illum perferendis corporis iure quasi eos ipsa.</p>
+      <br><br>
       <div id="coluna1">
         <h2><ins>1. Como alterar configurações de usúario?</ins></h2>
         <p>Através do acesso a aba editar perfil,o usuário poderá realizar as devidas mudanças nos dados que achar necessário.Isso não afetará o login da respectiva conta utilizada como também o uso de ferramentas no site.</p>
-        <br>
         <br>
         <br>
         <br>
@@ -91,7 +81,7 @@
       </div>
       <div id="coluna2">
         <h2><ins>3. Como cadastrar novas questões?</ins></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iure amet praesentium dolorum natus consequatur porro odit, recusandae cumque, modi itaque molestias, nobis dolores aspernatur similique libero? Sed, fugiat id.</p>
+        <p>Acessando a aba de provas o usuário professor terá disponível as avaliações já criadas, podendo então para cada prova adicionar novas questões.Ele terá disponível somente o repertório de questões da sua área de ensino.</p>
         <br>
         <br>
         <br>
@@ -99,8 +89,9 @@
         <br>
         <br>
         <br>
-        <h2><ins>Dúvida 4:</ins></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iure amet praesentium dolorum natus consequatur porro odit, recusandae cumque, modi itaque molestias, nobis dolores aspernatur similique libero? Sed, fugiat id.</p>
+        <h2><ins>4. Como ter acesso as informações dos alunos?</ins></h2>
+        <p>Essa é uma ferramenta disponível somente ao usuário professor. Este deverá inserir suas informações de login como email, senha, cpf e código de turma necessárias na aba minha turma.</p>
+        
       </div>
     </main>
       <!-- Rodapé -->

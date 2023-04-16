@@ -251,6 +251,7 @@ input[type="submit"]{
     align-items: center;
     justify-content: center;
     gap: 1px;
+    
 }
 .container-images{
     position: relative;
@@ -260,7 +261,9 @@ input[type="submit"]{
     width: 1500px;
     height: 640px;
     margin-bottom: -20px;
+   
 }
+
 .slider{
     opacity: 0;
     transition:0.3s;
@@ -368,17 +371,40 @@ footer div#linharp{
 /* Áreas de configurações específicas */
 
 /* Dúvidas */
-div#coluna1{
-    margin-right: 50px;
-    margin-left: 15px
-}
-div#coluna2{
-    margin-left: 860px;
+h1#tituloduv{
+    padding-top: 20px;
 }
 div#coluna1, div#coluna2{
-    margin-top: 20px;
-    text-indent: 15px;
-    height: 300px;
-    width: 300px;
+    height: 550px;
+    width: 320px;
     display: inline-block;
 }
+div#coluna1{
+    margin-left: 130px;
+}
+div#coluna2{
+    margin-left: 620px;
+}
+
+
+/* Tela Institucional*/
+h1#tituloint{
+    padding-top: 20px;
+}
+div.paragrafos{
+    padding: 30px;
+}
+div.paragrafos h2{
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 2px;
+    text-decoration: underline;
+}
+div.paragrafos p{
+    text-align: justify;
+    display: inline-block;
+    margin: auto;
+}
+div#p4{
+    margin-bottom: -200px;
+} 

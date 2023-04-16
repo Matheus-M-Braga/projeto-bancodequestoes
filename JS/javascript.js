@@ -10,9 +10,7 @@ function fecharModal(fecharModal){
     modal.style.display="none"
 }
 
-/*function ir(){
-    alert('skskksksks')
-}*/
+
 
 /* Script Slide */
 const slider = document.querySelectorAll('.slider');
@@ -51,3 +49,19 @@ function prevSlider() {
 
 btnNext.addEventListener('click', nextSlider)
 btnPrev.addEventListener('click', prevSlider)
+
+
+//Tela de cadastro professor e aluno :
+
+function abrirAluno(){
+document.location.href="../cadastroaluno.html"
+}
+
+function abrirProf(){
+  document.location.href="../cadastroprofesso.html"
+}
+
+
+function aviso(){
+  window.alert("Para conferir o catágolo de provas esteja logado!!!!!")
+}

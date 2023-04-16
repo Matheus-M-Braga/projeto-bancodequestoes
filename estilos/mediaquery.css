@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Celular */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 669px){
     main{
         background-color: darkred;
     }
@@ -44,7 +44,7 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 769px) and (max-width: 1024px){
+@media screen and (min-width: 670px) and (max-width: 1024px){
     main{
         background-color: burlywood;
     }
@@ -99,7 +99,7 @@
         text-decoration: none;
         display: inline;
         font-size: 19px;
-        margin: 0 200px;
+        margin: 0 150px;
         color: white;
         padding: 8px;
     }
@@ -114,7 +114,7 @@
     .container-slider{    
         display: flex;
         width: 100%;
-        min-height: 800px;
+        min-height: 820px;
         align-items: center;
         justify-content: center;
         gap: 1rem;
@@ -134,8 +134,9 @@
         cursor: pointer;
     }
     .container-images{
-        margin-top: -60px;
+       
     }
+
     .conteudo-modal{
         height: 660px;
     }
@@ -171,8 +172,9 @@
     }    
     picture img{
         position: fixed;
-        height: 98px;
-        width: 550px;
+        height: 80px;
+        width: 590px;
+       
     }
     ul{
         columns: 2;
@@ -181,7 +183,9 @@
         padding-left: 35px;
         margin-left: 720px;
         width: 700px;
-        height: 108px;
+        height: 89px;
+        padding-top: 10px;
+        padding-bottom: -10px;
     }
     footer div#linharp{
         border: black;
@@ -190,4 +194,5 @@
         height: 1px;
         width: 100%;
     }
+
 }
