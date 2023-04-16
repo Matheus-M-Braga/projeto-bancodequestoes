@@ -9,7 +9,7 @@
     div#logo{
         margin-top: 20px;
         height: 37px;
-        width: 180px;
+        width: 160px;
         background-image: url(../imagens/logo/logo-oficial-p.png);
     }
     /* Searchbar */
@@ -18,7 +18,7 @@
         height: 30px;
         position: absolute;
         top: 35px;
-        left: 240px;
+        left: 210px;
     }
     #btnBusca{
         position: absolute;
@@ -29,10 +29,14 @@
         padding-bottom: 3px;
         width: 150px;
     }
+    /* Login-btn */
+    div#login-btn{
+        left: 88%;
+    }
     /* Navbar */
     nav#linha{
         width: 100%;
-        padding-left: 65px;
+        padding-left: 50px;
     }
     nav#linha a{
         padding: 1px;
@@ -49,8 +53,8 @@
         columns: 2;
         list-style: none;
         font-size: 17px;
-        padding-left: 60px;
-        padding-right: 45px;
+        padding-left: 45px;
+        padding-right: 0;
         margin-left: 145px;
         width: 300px;
     }
