@@ -14,7 +14,7 @@
     }
     /* Searchbar */
     #divBusca{
-        width: 180px;
+        width: 150px;
         height: 30px;
         position: absolute;
         top: 35px;
@@ -36,7 +36,7 @@
     /* Navbar */
     nav#linha{
         width: 100%;
-        padding-left: 50px;
+        padding-left: 30px;
     }
     nav#linha a{
         padding: 1px;
@@ -49,13 +49,12 @@
     /* Rodapé */
     ul{
         position: relative;
-        margin-left: 200px;
         columns: 2;
         list-style: none;
         font-size: 17px;
         padding-left: 45px;
         padding-right: 0;
-        margin-left: 145px;
+        margin-left: 130px;
         width: 300px;
     }
     footer picture{
