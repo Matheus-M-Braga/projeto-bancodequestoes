@@ -42,10 +42,14 @@
     /* Modal */
     .conteudo-modal{
         width: 340px;
+        height: 570px;
     }
     .fechar-modal{
         margin-top: 5px;
         margin-left: 320px;
+    }
+    .input-login label{
+        left: 72px;
     }
     /* Slideshow */
     .container-images{

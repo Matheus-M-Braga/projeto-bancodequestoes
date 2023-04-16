@@ -150,7 +150,7 @@ nav a:hover{
     cursor: pointer;
 }
 .corpo-modal{
-    padding: 8px 8px 8px 8px;
+    padding: 8px;
     text-align: center;
     border-top: 1px solid #Eee;
 }
@@ -171,7 +171,6 @@ nav a:hover{
     margin-right: 3px;
     padding-bottom: 40px;
 }
-
 .entrar-btn{
     background-color: #fff;
     color: #006aba;
@@ -198,7 +197,7 @@ nav a:hover{
     border-bottom: 2px solid lightgrey;
     outline: none;
     min-width: 180px;
-    font-size: 13px;
+    font-size: 17px;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
@@ -215,7 +214,7 @@ nav a:hover{
     pointer-events: none;
     position: absolute;
     top: 0;
-    left: 94px;
+    left: 101px;
     margin-top: 13px;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
