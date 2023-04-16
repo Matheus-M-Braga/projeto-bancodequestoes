@@ -5,6 +5,9 @@
     main{
         background-color: darkred;
     }
+    body, html{
+        overflow-x: hidden;
+    }
     /* header */
     /* Searchbar */
     #divBusca{
