@@ -2,9 +2,6 @@
 
 /* Celular */
 @media screen and (max-width: 720px){
-    main{
-        background-color: darkred;
-    }
     /* header */
     div#logo{
         margin-top: 20px;
@@ -42,9 +39,17 @@
         padding: 1px;
         margin: 0 10px 0px 13px;
     }
+    /* Modal */
+    .conteudo-modal{
+        width: 340px;
+    }
+    .fechar-modal{
+        margin-top: 5px;
+        margin-left: 320px;
+    }
     /* Slideshow */
     .container-images{
-        height: 390px;
+        height: 300px;
     }
     /* Rodapé */
     ul{

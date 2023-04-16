@@ -123,7 +123,6 @@ nav a:hover{
     z-index: 3;
 }
 .conteudo-modal{
-    margin: 0 auto;
     margin-top: 120px;
     max-width: 400px;
     height: 600px;
@@ -170,12 +169,9 @@ nav a:hover{
     font-size: 30px;
     text-align: center;
     margin-right: 3px;
-    border-bottom: 1px solid #Eee;
-    margin-bottom: -300px;
+    padding-bottom: 40px;
 }
-.text-modal{
-    margin-top: -10px;
-}
+
 .entrar-btn{
     background-color: #fff;
     color: #006aba;
@@ -232,7 +228,8 @@ nav a:hover{
     color: #3951b2;
 }
 div#area-email{
-    margin-bottom: 15px;
+    margin-top: -1px;
+    margin-bottom: 10px;
 }
 div#area-senha{
     margin-top: -5px;
