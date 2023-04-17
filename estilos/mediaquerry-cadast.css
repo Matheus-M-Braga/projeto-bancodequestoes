@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 600px){
+    body, html{
+        overflow-y: visible;
+    }
     .container{
         height: 90vh;
         flex-direction: column;
@@ -60,7 +63,7 @@
         margin-bottom: 30px;
     }
     .btn00{
-        margin-left: 60px;
+        margin-left: 30px;
     }
     .btn00, .btn01{
         width: 130px;
