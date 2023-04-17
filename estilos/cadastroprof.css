@@ -62,28 +62,25 @@ body {
 
 .login-button button {
     border: none;
-    background-color: #cf5717;
+    background-color: rgb(207, 87, 23);
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
-
 .login-button button:hover {
-    background-color: #cf5717;
+    background-color: rgba(207, 87, 23, 0.900);
 }
-
 .login-button button a {
     text-decoration: none;
     font-weight: 500;
     color: #fff;
 }
-
 .form-header h1::after {
     content: '';
     display: block;
     width: 5rem;
     height: 0.3rem;
-    background-color: #cf5717;
+    background-color: rgb(207, 87, 23);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -106,27 +103,27 @@ body {
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.11);
     font-size: 0.8rem;
 }
 
 .input-box input:hover {
-    background-color: #eeeeee75;
+    background-color: rgba(238, 238, 238, 0.459);
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #cf5717;
+    outline: 1px solid rgb(207, 87, 23);
 }
 
 .input-box label,
 .gender-title h6 {
     font-size: 0.75rem;
     font-weight: 600;
-    color: #000000c0;
+    color: rgba(0, 0, 0, 0.753);
 }
 
 .input-box input::placeholder {
-    color: #000000be;
+    color: rgba(0, 0, 0, 0.745);
 }
 
 .gender-group {
@@ -148,7 +145,7 @@ body {
 .gender-input label {
     font-size: 0.81rem;
     font-weight: 600;
-    color: #000000c0;
+    color: rgba(0, 0, 0, 0.753);
 }
 
 .continue-button button {

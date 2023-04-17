@@ -135,7 +135,9 @@ body {
     margin-top: 0.62rem;
     padding: 0 .5rem;
 }
-
+.gender-group div{
+    margin-right: 100px;
+}
 .gender-input {
     display: flex;
     align-items: center;

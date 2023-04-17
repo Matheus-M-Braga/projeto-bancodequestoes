@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Celular */
-@media screen and (max-width: 720px){
+@media screen and (max-width: 600px){
     /* header */
     div#logo{
         margin-top: 20px;
@@ -79,7 +79,7 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 721px) and (max-width: 1024px){
+@media screen and (min-width: 601px) and (max-width: 1024px){
     main{
         background-color: burlywood;
     }
