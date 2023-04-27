@@ -63,5 +63,7 @@ function abrirProf(){
 
 
 function aviso(){
-  window.alert("Para conferir o catágolo de provas esteja logado!!!!!")
+  window.alert("Para conferir o catágolo de provas, esteja logado!!!!!")
 }
+
+

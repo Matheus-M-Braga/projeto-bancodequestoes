@@ -5,10 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/icones/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/newdisciplina.css" media="all">
-    <link rel="stylesheet" href="estilos/mediaquerry-cadast.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
+        :root{
+            --azul_escuro: rgb(19, 51, 76); 
+            --azul_claro: rgb(0, 106, 186);
+            --branco: rgb(246, 246, 233);
+            --laranja: rgb(207, 87, 23);
+            --laranja-claro: rgb(255, 112, 35);
+        }
+
+        body{
+            background-image: url(imagens/fundoquedabom.jpg);
+        }
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            margin: 0;
+            padding: 0;
+        }
+
+        main#main-escolha{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px #000000;
+            height: 250px;
+            width: 600px;
+            padding: 10px;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+
+        h1#h1-escolha{
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .btn00 {
+            margin-left:160px;
+            padding: 20px;
+            width: 130px;
+            background-color: white;
+            border: 1px solid var(--azul_claro);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn01 {
+            margin-left: 20px;
+            padding: 20px;
+            width: 130px;
+            background-color: white;
+            border: 1px solid var(--azul_claro);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .btn00:hover , .btn01:hover{
+            background-color: var(--azul_claro);
+            color: white;
+            transition: 0.5s;
+        }
+        @media screen and (min-width: 1400px){
+            main#main-escolha{
+                margin-top: 300px;
+            }
+        }
+    </style>
     <title>Cadastro</title>
-    
 </head>
 <body>
     <main id="main-escolha">

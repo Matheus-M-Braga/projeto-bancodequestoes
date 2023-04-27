@@ -12,14 +12,9 @@
 <body>
       <!-- Cabeçalho -->
       <header>
-        <a href="index.html" id="logo-oficial">
           <div id="logo">
+            <a href="#" id="logo-oficial"><img src="imagens/logo/logo-oficial-g.png" alt=""></a>
           </div>
-        </a>
-            <div id="divBusca">
-                <input aria-selected="false" type="text" id="txtBusca" placeholder="Pesquisar..."/>
-                <img src="imagens/icones/lupa2.png" id="btnBusca" alt="Buscar">
-            </div>
         <div id="login-btn" onclick="abrirModal('vis-modal')">
             <abbr title="Login/Cadastro"><img id="login" src="imagens/icones/user.png" alt="login"></abbr>
         </div>
@@ -38,7 +33,7 @@
                 <img src="Imagens/icones/Logo(oficial)menor.png" alt="logo" class="logo-btn">
             </div>
             <div class="corpo-modal">
-              <form action="" method="post">
+              <form action="TesteLogin.php" method="POST">
                 <p class="login-modal">LOGIN:</p>
                 <div class="input-login" id="area-email">
                   <input type="text" placeholder=" " name="email" required>
@@ -50,13 +45,13 @@
                   <label for="senha">Senha:</label>
                 </div>
                   <p>Login como:</p>
-                  <input type="radio" name="pessoa" id="pessoa00" checked class="radiobt"><label for="pessoa00">Professor</label> &nbsp; &nbsp; &nbsp;
-                  <input type="radio" name="pessoa" id="pessoa01" class="radiobt"><label for="pessoa01">Aluno</label>
+                  <input type="radio" name="usuario" value="professor" checked class="radiobt"><label for="professor">Professor</label> &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="usuario" value="aluno" class="radiobt"><label for="aluno">Aluno</label>
                   <br>
-                  <input type="submit" value="ENTRAR" class="entrar-btn">
+                  <input name="submit" type="submit" value="ENTRAR" class="entrar-btn">
               </form>
               
-                <p><a href="skpakspa.html">Esqueceu a senha?</a></p>
+                <p><a href="recuperar-senha.html">Esqueceu a senha?</a></p>
                 <br>
                 <p>É novo por aqui? <a href="cadastro00.html">Cadastre-se</a></p>
             </div>
@@ -84,20 +79,20 @@
       <!-- Rodapé -->
       <footer>
         <div id="linha2"></div>
-        
-          <picture>
-            <source media="(max-width: 768px)" srcset="imagens/logo/bonecoestudaja2-p.png">
-            <source media="(max-width: 1024px)" srcset="imagens/logo/bonecoestudaja2-m.png">
-            <source media="(max-width: 1367px)" srcset="imagens/logo/bonecoestudaja2-mg.png">
-            <img src="imagens/logo/bonecoestudaja2.png" alt="a">
-          </picture>
-        
+        <picture>
+          <source media="(max-width: 768px)" srcset="imagens/logo/bonecoestudaja2-p.png">
+          <source media="(max-width: 1024px)" srcset="imagens/logo/bonecoestudaja2-m.png">
+          <source media="(max-width: 1367px)" srcset="imagens/logo/bonecoestudaja2-mg.png">
+          <img src="imagens/logo/bonecoestudaja2.png" alt="a">
+        </picture>
+      
             <ul>
               <li><strong class="titulo"><ins>Início</ins></strong></li>
               <li><a href="index.html">Home</a></li>
               <li><a href="institucional.html">Institucional</a></li>
               <li><a href="duvidas.html">Dúvidas</a></li>
 
+              
               <li><strong class="titulo" id="suporte"><ins>Suporte</ins></strong></li>
               <li><a href="duvidas.html">FAQ</a></li>
               <li><a href="email.html.html">E-mail</a></li>

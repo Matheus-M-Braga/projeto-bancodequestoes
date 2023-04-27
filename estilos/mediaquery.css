@@ -7,7 +7,6 @@
         margin-top: 20px;
         height: 37px;
         width: 160px;
-        background-image: url(../imagens/logo/logo-oficial-p.png);
     }
     /* Searchbar */
     #divBusca{
@@ -91,7 +90,6 @@
         margin-top: 20px;
         width: 180px;
         height: 37px;
-        background-image: url(../imagens/logo/logo-oficial-p.png);
     }
     /* Searchbar */
     #divBusca{
@@ -181,18 +179,6 @@
     input[type="radio" ]{
         margin-top: 10px;
     }
-    /* Searchbar */
-    #divBusca{
-        background-color:#ffffff;
-        border:solid 1px;
-        border-radius:15px;
-        width: 300px;
-        height: 35px;
-        position: absolute;
-        top: 35px;
-        left: 70%;
-    }
-    /*   */
     /* Rodapé */
     footer{
         height: fit-content;
@@ -205,7 +191,6 @@
         position: fixed;
         height: 80px;
         width: 590px;
-       
     }
     ul{
         columns: 2;
@@ -225,5 +210,11 @@
         height: 1px;
         width: 100%;
     }
-
+    /* Duvidas */
+    main#duvidas{
+        height: 650px;
+    }
+    h1#tituloduv{
+        margin-bottom: 40px;
+    }
 }
