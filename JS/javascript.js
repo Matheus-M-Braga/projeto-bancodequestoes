@@ -1,16 +1,14 @@
 /* Script Modal */ 
 function abrirModal(carregarModal){
-    var modal=document.getElementById(carregarModal)
-    modal.style.display="block"
+  var modal=document.getElementById(carregarModal)
+  modal.style.display = "block"
     
 }
 
 function fecharModal(fecharModal){
-    var modal=document.getElementById(fecharModal)
-    modal.style.display="none"
+  var modal=document.getElementById(fecharModal)
+  modal.style.display = "none"
 }
-
-
 
 /* Script Slide */
 const slider = document.querySelectorAll('.slider');
@@ -54,16 +52,41 @@ btnPrev.addEventListener('click', prevSlider)
 //Tela de cadastro professor e aluno :
 
 function abrirAluno(){
-document.location.href="../cadastroaluno.html"
+  document.location.href="cadastroaluno.php";
 }
 
 function abrirProf(){
-  document.location.href="../cadastroprofesso.html"
+  document.location.href="cadastroprofesso.php";
 }
 
 
 function aviso(){
-  window.alert("Para conferir o catágolo de provas, esteja logado!!!!!")
+  window.alert("Para conferir o catágolo de Questões, esteja logado!!!!!")
 }
 
-
+// Menu hamburguer
+function clickMenu(){
+    if(linha.style.display == 'block'){
+      linha.style.display = 'none'
+      burguer.style.display = 'block'
+      burguer_open.style.display = 'none'
+    }
+    else{
+      linha.style.display = 'block'
+      burguer.style.display = 'none'
+      burguer_open.style.display = 'block'
+    }
+}
+// Teste tamanho
+function mudaTamanho(){
+  if(window.innerWidth > 1040){
+    burguer.style.display = 'none'
+    linha.style.display = 'block'
+    burguer_open.style.display = 'none'
+  }
+  else if(window.innerWidth < 1040 && linha.style.display == 'block'){
+    burguer.style.display = 'block'
+    linha.style.display = 'none'
+    burguer_open.style.display = 'none'
+  }
+}

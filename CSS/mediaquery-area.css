@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@media screen and (max-width: 800px) {
+    .acoes{
+        margin-top: 0px;
+        margin-left: 78%;
+        display: inline;
+    }
+    .areatexto{
+        width: 94%;
+    }
+    input[type="text"]{
+        width: 385px;
+    }
+    div#sair{
+        margin-left: 84%;
+    }
+    nav#linha{
+        display: none;
+    }
+    nav#linha a{
+        display: list-item;
+        padding: 3px; 
+        margin: 3px;
+        /* margin: 0 10px 0px 13px; */
+    }
+    nav#linha a:hover{
+        height: fit-content;
+        width: fit-content;
+    }
+    /* burguer */
+    #burguer{
+        background-color: #aa4d1c;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+    #burguer_open{
+        background-color: #aa4d1c;
+        display: none;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer_open:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1140px) {
+    .areatexto{
+        width: 94%;
+    }
+    /* burguer */
+    nav#linha{
+        display: none;
+    }
+    nav#linha a{
+        display: list-item;
+        padding: 3px; 
+        margin: 3px;
+        /* margin: 0 10px 0px 13px; */
+    }
+    nav#linha a:hover{
+        height: fit-content;
+        width: fit-content;
+    }
+    /* burguer 2 */
+    #burguer{
+        background-color: #aa4d1c;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+    #burguer_open{
+        background-color: #aa4d1c;
+        display: none;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer_open:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+}

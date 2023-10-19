@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+/* Celular */
+@media screen and (max-width: 600px){
+    /* header */
+    div#logo{
+        margin-top: 20px;
+        height: 37px;
+        width: 160px;
+    }
+    /* Searchbar */
+    #divBusca{
+        width: 150px;
+        height: 30px;
+        position: absolute;
+        top: 35px;
+        left: 190px;
+    }
+    #btnBusca{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+    #txtbusca{
+        padding-bottom: 3px;
+        width: 150px;
+    }
+    /* Login-btn */
+    div#login-btn{
+        left: 88%;
+    }
+    /* Navbar */
+    nav#linha{
+        display: none;
+        width: 100%;
+    }
+    nav#linha a{
+        display: list-item;
+        padding: 1px; 
+        margin: 3px;
+        /* margin: 0 10px 0px 13px; */
+    }
+    nav#linha a:hover{
+        height: fit-content;
+        width: fit-content;
+    }
+    #burguer{
+        background-color: #aa4d1c;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+    #burguer_open{
+        background-color: #aa4d1c;
+        display: none;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer_open:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+    /* Modal */
+    .container-slider{
+        min-height: 200px;
+    }
+    .conteudo-modal{
+        width: 340px;
+        height: 580px;
+    }
+    .fechar-modal{
+        margin-top: 5px;
+        margin-left: 320px;
+    }
+    .input-login label{
+        left: 72px;
+    }
+    /* Slideshow */
+    .container-images{
+        height: 300px;
+    }
+    /* Rodapé */
+    ul{
+        position: relative;
+        columns: 2;
+        list-style: none;
+        font-size: 17px;
+        padding-left: 45px;
+        padding-right: 0;
+        margin-left: 130px;
+        width: 300px;
+    }
+    footer picture{
+        width: 200px;
+        height: 40px;
+    }
+    footer picture img{
+        width: 120px;
+        height: 50px;
+        padding-top: 25px;
+        padding-left: -10px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 1040px){
+    /* Cabeçalho */
+    header{
+        padding: 8px;
+    }
+    div#logo{
+        margin-top: 20px;
+        width: 180px;
+        height: 37px;
+    }
+    /* Navbar */
+    nav#linha{
+        display: none;
+        width: 100%;
+    }
+    nav#linha a{
+        display: list-item;
+        padding: 1px; 
+        margin: 3px;
+        /* margin: 0 10px 0px 13px; */
+    }
+    nav#linha a:hover{
+        height: fit-content;
+        width: fit-content;
+    }
+    #burguer{
+        background-color: #aa4d1c;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+    #burguer_open{
+        background-color: #aa4d1c;
+        display: none;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #burguer_open:hover{
+        background-color: #af460e;
+        color: white;
+        transition: 0.2s;
+    }
+    /* Slideshow */
+    .container-images{
+        height: 428px;
+        margin-bottom: -8px;
+    }
+    /* Rodapé */
+    ul{
+        margin-left: 400px;
+    }
+}
+/* extra */
+@media screen and (min-width: 601px) and (max-width: 768px){
+    footer picture img{
+        width: 180px;
+    }
+}
+/* extra 2 */
+@media screen and (min-width: 601px) and (max-width: 782px){
+    ul{
+        margin-left: 200px;
+    }
+    footer picture img{
+        width: 180px;
+    }
+}
+/* extra 3 */
+@media screen and (min-width: 1367px) and (max-width: 1548){
+    nav a{
+        margin: 0px 120px;
+    }
+    .container-slider{
+        min-height: 650px;
+    }
+}
+/* Tamanho diferente */
+@media screen and (min-width: 1041px) and (max-width: 1290px){
+    nav a{
+        margin: 0px 80px 0px 90px;
+    }
+    #burguer{
+        display: none;
+    }
+    #burguer_open{
+        display: none;
+    }
+    nav{
+        display: block;
+    }
+}
+
+/* Telas maiores */
+@media screen and (min-width: 1367px) and (max-width: 2001px){
+    /* Cabeçalho */
+    nav#linha{
+        display: block;
+        height: fit-content;
+        padding: 10px;
+        width: 100%;
+        background-color: #aa4d1c;
+        text-align: center;
+    }
+    nav a{
+        text-decoration: none;
+        display: inline;
+        font-size: 19px;
+        /* margin: 0 150px; */
+        color: white;
+        padding: 8px;
+    }
+    nav a:hover{
+        text-decoration: none;
+        background-color: rgba(228, 92, 2, 0.678);
+        height: 20px;
+        width: 200px;
+        border-radius: 6px;
+    }
+    #burguer{
+        display: none;
+    }
+    #burguer_open{
+        display: none;
+    }
+    /* Modal */
+    .container-slider{    
+        display: flex;
+        width: 100%;
+        min-height: 820px;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .conteudo-modal{
+        height: 680px;
+    }
+    .cabecalho-modal{
+        margin-top: 80px;
+    }
+    /* Botão Login */
+    div#login-btn{
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: -970px;
+        cursor: pointer;
+    }
+    .conteudo-modal{
+        height: 660px;
+    }
+    input[type="submit"]{
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    input[type="radio" ]#pessoa00{
+    margin-left: -15px;
+    }
+    input[type="radio" ]{
+        margin-top: 10px;
+    }
+    /* Rodapé */
+    footer{
+        height: fit-content;
+        font-size: 19px;
+    }
+    picture{
+        margin-left: 40px;
+    }    
+    picture img{
+        position: fixed;
+        height: 80px;
+        width: 590px;
+    }
+    ul{
+        columns: 2;
+        list-style: none;
+        font-size: 17px;
+        padding-left: 35px;
+        margin-left: 720px;
+        width: 700px;
+        height: 100px;
+        padding-top: 10px;
+        padding-bottom: -10px;
+    }
+    footer div#linharp{
+        border: black;
+        background-color: black;
+        color: black;
+        height: 1px;
+        width: 100%;
+    }
+    /* Duvidas */
+    main#duvidas{
+        height: 650px;
+    }
+    h1#tituloduv{
+        margin-bottom: 40px;
+    }
+}

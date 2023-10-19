@@ -1,0 +1,528 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+/* Configurações gerais */
+:root{
+    --azul_escuro: rgb(19, 51, 76); 
+    --azul_claro: rgb(0, 106, 186);
+    --branco: rgb(246, 246, 233);
+    --laranja: rgb(207, 87, 23);
+    --laranja-claro: rgb(255, 112, 35);
+    --background: #ffffff;
+    --progress-background: rgba(0, 0, 0, 0.25);
+    --first: #353535;
+    --second: #3c6e71;
+    --third: #d9d9d9;
+    --fourth: #284b63;
+}
+*{
+    font-family: 'Source Sans 3', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+body, html{
+    background-image: url(../imagens/fundofoda.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: var(--azul_claro);
+}
+a:hover{
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+/* cabeçalho */
+header{
+    height: 80px;
+    padding: 13px;
+    border: 1px solid var(--laranja);
+    background-color: var(--laranja);
+}
+div#login-user{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 28px;
+    left: 1%;
+    cursor: pointer;
+    display: flex;
+    background-repeat: no-repeat;
+}
+#texto-user{
+    position: absolute;
+    width: 200px;
+    height: 68px;
+    top: -10px;
+    left: 10px;
+    color: white;
+}
+nav{
+    height: fit-content;
+    padding: 10px;
+    width: 100%;
+    background-color: #aa4d1c;
+}
+nav a{
+    text-decoration: none;
+    display: inline;
+    font-size: 18px;
+    margin: 0px 86px 0px 158px;
+    color: white;
+    padding: 8px;
+}
+nav a:hover{
+    text-decoration: none;
+    background-color: rgba(228, 92, 2, 0.678);
+    height: 20px;
+    width: 200px;
+    border-radius: 6px;
+}
+#burguer{
+    display: none;
+}
+#burguer_open{
+    display: none;
+}
+/* Corpo */
+main{
+    background-color: rgb(240, 240, 240);
+    box-shadow: 5px 0px rgba(0, 0, 0, 0.300), -5px 0 rgba(0, 0, 0, 0.300);
+    border-radius: 6px;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 83vh;
+    overflow: hidden;
+}
+main h1{
+    margin-top: 20px;
+}
+
+/* Início */
+div.grid-dash{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgba(0, 54, 95, 0.798);
+    border-radius: 5px;
+    padding: 10px;
+    row-gap: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+div.blocos{
+    width: 500px;
+    min-height: 230px;
+    border: 1px solid gray;
+    background-color: var(--branco);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+.num{
+    width: 50px;
+    height: 40px;
+    border: 1px solid black;
+}
+.ver-btn {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background-color: var(--laranja-claro);
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	padding: 11px 8px;
+	text-decoration:none;
+}
+.ver-btn:hover {
+	background-color:var(--laranja-claro);
+}
+
+/* Progressbar */
+div.container {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.progress {
+  padding: 2px;
+  background: var(--progress-background);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 14px;
+  background-color: #353535;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-striped .progress-bar {
+  background-color: var(--second);
+  width: 90%;
+  background-image: linear-gradient(
+    45deg,
+    var(--first) 25%,
+    transparent 25%,
+    transparent 50%,
+    var(--first) 50%,
+    var(--first) 75%,
+    transparent 75%,
+    transparent
+  );
+  animation: progressAnimationStrike 6s;
+}
+
+@keyframes progressAnimationStrike {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Edittar perfil */
+input[type="text"], input[type="password"], select{
+    border-radius: 5px;
+    padding: 8px;
+    width: 400px;
+    border: 1px solid gray;
+}
+input[type="text"]:hover, input[type="password"]:hover, select:hover{
+    background-color: rgba(0, 0, 0, 0.108);
+}
+input[type="text"]:focus, input[type="password"]:focus, select:focus{
+    background-color: rgba(0, 0, 0, 0.108);
+}
+input[type="submit"]{
+    background-color: var(--laranja);
+    color: white;
+}
+input[type="submit"]:hover{
+    background-color: var(--laranja-claro);
+    transition: 0.5s;
+}
+input[type="reset"]{
+    background-color: white;
+}
+input[type="reset"]:hover{
+    background-color: red;
+    color: white;
+    transition: 0.5s;
+}
+input.buttons-form{
+    padding: 10px 55px 10px 55px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+div#input-group{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0;
+    width: 200px;
+    height: 140px;
+    align-items: center;
+    align-content: space-evenly;
+}
+div#group1{
+    width: fit-content;
+}
+div#group2{
+    width: fit-content;
+}
+div.itens-grid{
+    padding: 5px;
+    width: fit-content;
+    margin-right: 0;
+}
+div#buttons{
+    margin-left: 255px;
+}
+div#buttons2{
+    margin: 0;
+}
+
+#sair-btn{
+    margin-left: 0px;
+    margin-top:0px;
+    border: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(196, 40, 40);
+    cursor: pointer;
+}
+
+div#sair{
+    width: 80px;
+    height: 40px;
+    margin-left: 93%;
+    margin-top: 20px;
+}
+
+/* Minha turma */
+div.alunos{
+    width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    justify-content: start;
+}
+div.aluno{
+    border: 1px solid rgb(42, 42, 42);
+    width: 250px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-radius: 10px;
+    height: 100px;
+    background-color: rgb(36, 36, 36);
+    color: rgb(255, 255, 255);
+}
+div.dados{
+    display: inline-block;
+    padding: 5px;
+    height: 100%;
+}
+div.user-img{
+    height: 100%;
+    border-radius: 10px;
+}
+div.user-img img{
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    height: 95%;
+}
+
+/* Ajuda */
+h1#tituloduv{
+    text-indent: 0px;
+}
+h2.h2-duvidas{
+    text-indent: 10px;
+
+}
+p.p-duvidas{
+    margin-bottom: 15px;
+    text-indent: 0px;
+}
+
+/* pika */
+
+.container01{
+    padding-bottom: 41px;
+    margin-top: 12px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    padding-right: 2px;
+    padding-left: 3px;
+    padding-top: 14px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.container_questao{
+    margin-top: 8px;
+    width: 1489px;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.progresso {
+    padding: 2px;
+    background: var(--progress-background);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08);
+  }
+
+
+.ordem_progresso {
+    height: 14px;
+    background-color: #353535;
+    border-radius: 4px;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+  }
+
+.progresso-strip .ordem_progresso {
+    background-color: var(--second);
+    width: 90%;
+    background-image: linear-gradient(
+      45deg,
+      var(--first) 25%,
+      transparent 25%,
+      transparent 50%,
+      var(--first) 50%,
+      var(--first) 75%,
+      transparent 75%,
+      transparent
+    );
+    animation: progressAnimationStrike 6s;
+  }
+
+  .ajeitar_barra{
+    width: 650px;
+  }
+
+  .camptext{
+    margin-top: 10px;
+    margin-left: 1000px;
+    padding: 12px;
+    width: 180px;
+    height: fit-content;
+  }
+
+
+  .container02{
+    margin-top: 12px;
+    width: 1300px;
+    height: 400px;
+    border: 1px solid black;
+    margin-left: 80px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.container03{
+    margin-top: 12px;
+    width: 1300px;
+    height: 400px;
+    border: 1px solid black;
+    margin-left: 80px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.nota{
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+#camptext01{
+    margin-top: -20px;
+}
+
+.acoes{
+    margin-top: -66px;
+    margin-left: 90%;
+}
+
+#turmas_box{
+    margin-top: -95px;
+    margin-left: 60%;
+}
+
+#novo{
+    font-size: 18px;
+    color: var(--azul_claro);
+    cursor: pointer;
+    border: 1px solid var(--azul_claro);
+    width: fit-content;
+    padding: 8px;
+    border-radius: 12px;
+    text-decoration: none;
+   
+}
+
+#novo:hover{
+    background-color: var(--azul_claro);
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.alunos{
+    margin-bottom: 20px;
+}
+
+#novobt{
+    text-decoration: none;
+    
+}
+
+#novobt:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.areatexto{
+    padding: 8px;
+    width: 98%;
+    font-size:18px;
+    outline: 0;
+    margin-left: 7px;
+    margin-top: 20px;
+    
+}
+textarea{
+    border-radius: 12px;
+}
+
+#btns{
+   margin-left: 37%;
+}
+
+.itens{
+    margin-top: 20px;
+}
+
+.select_questoes{
+    width: 210px;
+}
+
+#bt_filter{
+    width: 70;
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#select_prova_pai{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#quantidade{
+    margin-left: 4px;
+    border-radius: 5px;
+    width: 210px; 
+    padding: 12px;
+    outline: 0;
+    height: 40px;
+    border: 1px solid gray;
+}
+
+#tuma1{
+    width: 120px;;
+}
+
+#data1{
+    width: 180px;
+}
+
+#N{
+    width: 40px;
+}
+
+.preencher{
+    margin-left: 260px;
+    margin-top: -35px;
+    padding-left: 12px;
+}
+

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <link rel="stylesheet" href="CSS/style.css" media="all">
+    <link rel="stylesheet" href="CSS/mediaquery.css">
     <link rel="shortcut icon" href="imagens/icones/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Estuda.ja</title>
 </head>
-<body>
+<body onresize="mudaTamanho()">
       <!-- Cabeçalho -->
       <header>
         <div id="logo">
@@ -19,10 +20,16 @@
             <abbr title="Login/Cadastro"><img id="login" src="imagens/icones/user.png" alt="login"></abbr>
         </div>
       </header>
+      <span id="burguer" onclick="clickMenu()" class="material-symbols-outlined">
+        menu
+      </span>
+      <span id="burguer_open" onclick="clickMenu()" class="material-symbols-outlined">
+        menu_open
+      </span>
       <nav id="linha">
             <a href="index.html">Início</a>
             <a href="institucional.html">Institucional</a>
-            <a href="duvidas.html">Dúvidas</a>
+            <a href="duvidas.html" style="font-weight: bold;">Dúvidas</a>
             <a href="" onclick="aviso()">Provas</a>
       </nav>
       <!-- Telinha de login/cadastro -->
@@ -33,7 +40,7 @@
                 <img src="Imagens/icones/Logo(oficial)menor.png" alt="logo" class="logo-btn">
             </div>
             <div class="corpo-modal">
-              <form action="" method="post">
+              <form action="PHP/TesteLogin.php" method="POST">
                 <p class="login-modal">LOGIN:</p>
                 <div class="input-login" id="area-email">
                   <input type="text" placeholder=" " name="email" required>
@@ -45,13 +52,12 @@
                   <label for="senha">Senha:</label>
                 </div>
                   <p>Login como:</p>
-                  <input type="radio" name="pessoa" id="pessoa00" checked class="radiobt"><label for="pessoa00">Professor</label> &nbsp; &nbsp; &nbsp;
-                  <input type="radio" name="pessoa" id="pessoa01" class="radiobt"><label for="pessoa01">Aluno</label>
+                  <input type="radio" name="usuario" id="professor" checked class="radiobt"><label for="pessoa00">Professor</label> &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="usuario" id="aluno" class="radiobt"><label for="pessoa01">Aluno</label>
                   <br>
                   <input type="submit" value="ENTRAR" class="entrar-btn">
               </form>
-              
-                <p><a href="recuperar-senha.html">Esqueceu a senha?</a></p>
+                <p><a href="recuperar-senha.php">Esqueceu a senha?</a></p>
                 <br>
                 <p>É novo por aqui? <a href="cadastro00.html">Cadastre-se</a></p>
             </div>

@@ -1,0 +1,443 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+
+/* Configurações gerais */
+:root {
+    --azul_escuro: rgb(19, 51, 76);
+    --azul_claro: rgb(0, 106, 186);
+    --branco: rgb(246, 246, 233);
+    --laranja: rgb(207, 87, 23);
+    --laranja-claro: rgb(255, 112, 35);
+}
+
+* {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+body,
+html {
+    background-image: url(../imagens/fundoquedabom.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--azul_claro);
+}
+
+a:hover {
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+/* Demais elementos do cabeçalho */
+header {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: var(--laranja);
+}
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+    padding: 7px;
+    width: 100%;
+    background-color: #aa4d1c;
+}
+nav a.selected {
+    font-weight: bold;
+}
+
+#burguer {
+    display: none;
+    background-color: #aa4d1c;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#burguer:hover {
+    background-color: #af460e;
+    color: white;
+    transition: 0.2s;
+}
+
+#burguer_open {
+    background-color: #aa4d1c;
+    display: none;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#burguer_open:hover {
+    background-color: #af460e;
+    color: white;
+    transition: 0.2s;
+}
+
+/* Estilização da tela de login */
+.modal {
+    background-color: rgba(71, 71, 71, 0.719);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 3;
+}
+
+.conteudo-modal {
+    margin-top: 120px;
+    max-width: 400px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.cabecalho-modal {
+    background-color: #cf5717;
+    height: 110px;
+    margin-top: 35px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: solid #af4d18 11px;
+    justify-content: space-between;
+}
+
+.logo-btn {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 79px;
+}
+
+.fechar-modal {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 370px;
+    cursor: pointer;
+}
+
+.corpo-modal {
+    padding: 8px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.corpo-modal p {
+    margin-bottom: -5px;
+}
+
+.corpo-modal a {
+    color: var(--azul_claro);
+    text-decoration: none;
+}
+
+.corpo-modal a:hover {
+    text-decoration: underline;
+}
+
+.login-modal {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-right: 3px;
+    padding-bottom: 40px;
+}
+
+.entrar-btn {
+    background-color: #fff;
+    color: #006aba;
+    width: 160px;
+    height: 80px;
+    border: 2px solid #006aba;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-bottom: 80px;
+}
+
+.entrar-btn:hover {
+    background-color: #006aba;
+    color: #fff;
+}
+
+.input-login {
+    position: relative;
+    padding-top: 15px;
+    margin-top: 70px;
+}
+
+.input-login input {
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    outline: none;
+    width: 180px;
+    font-size: 17px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    appearance: none;
+    border-radius: 0;
+}
+
+.input-login input:focus {
+    border-bottom: 2px solid #3951b2;
+}
+
+.input-login input::placeholder {
+    color: transparent;
+}
+
+.input-login label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 101px;
+    margin-top: 13px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+}
+
+.input-login input:focus+label,
+.input-login input:not(:placeholder-shown)+label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #3951b2;
+}
+
+div#area-email {
+    margin-top: -1px;
+    margin-bottom: 10px;
+}
+
+div#area-senha {
+    margin-top: -5px;
+    margin-bottom: 50px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Conteúdo principal */
+/* Slideshow */
+.container-slider {
+    display: flex;
+    width: 100%;
+    min-height: 550px;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    overflow: hidden;
+}
+
+.container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1500px;
+    height: 140px;
+    margin-bottom: -20px;
+}
+
+.slider {
+    opacity: 0;
+    transition: 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.on {
+    opacity: 1;
+}
+
+#prev-button,
+#next-button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button img,
+#next-button img {
+    width: 80%;
+    height: 80%;
+}
+
+#prev-button {
+    transform: rotate(180deg);
+}
+
+/* Restante do conteúdo */
+.body{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 80vh;
+}
+main {
+    background-color: white;
+    box-shadow: 5px 0px rgba(0, 0, 0, 0.3), -5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    width: 80vw;
+    /* height: 50vh; */
+    margin: 0 auto;
+    padding: 15px;
+}
+
+main h1 {
+    font-size: 35px;
+    padding: 2px 10px 10px 10px;
+    text-indent: 20px;
+}
+
+main p {
+    font-size: 18px;
+    padding: 10px 10px 17px 10px;
+    text-indent: 20px;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--laranja);
+    color: black;
+    border: none;
+    height: 20vh;
+    font-size: 16px;
+}
+
+footer .content {
+    display: flex;
+    justify-content: center;
+}
+
+footer .col1,
+footer .col2 {
+    width: 10%;
+}
+
+footer .col2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+footer div#linha2 {
+    height: 16px;
+    background-color: #aa4d1c;
+    border: none;
+}
+
+footer picture {
+    margin-left: 40px;
+}
+
+footer picture img {
+    width: 280px;
+    padding-top: 15px;
+    position: absolute;
+}
+
+strong#suporte {
+    margin-left: -2px;
+    margin-bottom: 1px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: fit-content;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p#frasef {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    text-align: center;
+}
+
+footer div#linharp {
+    background-color: black;
+    color: black;
+    margin-top: 10px;
+    height: 1px;
+    width: 100%;
+}
+
+/* Áreas de configurações específicas */
+
+/* Dúvidas */
+h1#tituloduv {
+    text-indent: 0px;
+}
+
+h2.h2-duvidas {
+    text-indent: 10px;
+}
+
+p.p-duvidas {
+    margin-bottom: 15px;
+    text-indent: 0px;
+}
+
+/* Tela Institucional*/
+h1#tituloint {
+    padding-top: 20px;
+}
+
+div.paragrafos {
+    padding: 30px;
+}
+
+div.paragrafos h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 2px;
+    text-decoration: underline;
+}
+
+div.paragrafos p {
+    text-align: justify;
+    display: inline-block;
+    margin: auto;
+}
+
+div#p4 {
+    margin-bottom: -200px;
+}

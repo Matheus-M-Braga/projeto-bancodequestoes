@@ -1,107 +1,187 @@
-<!DOCTYPE html5> 
+<!DOCTYPE html5>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/mediaquery.css">
-    <link rel="shortcut icon" href="imagens/icones/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" media="all" />
+    <!-- <link rel="stylesheet" href="CSS/mediaquery.css" /> -->
+    <link
+      rel="shortcut icon"
+      href="imagens/icones/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <title>Estuda.ja</title>
-</head>
-<body>
-      <!-- Cabeçalho -->
-      <header>
-          <div id="logo">
-            <a href="#" id="logo-oficial"><img src="imagens/logo/logo-oficial-g.png" alt=""></a>
-          </div>
+  </head>
+  <body onresize="mudaTamanho()">
+    <header>
+      <div class="header_top">
+        <a href="#" id="logo-oficial">
+          <img src="imagens/logo/logo-oficial-g.png" alt="" />
+        </a>
         <div id="login-btn" onclick="abrirModal('vis-modal')">
-            <abbr title="Login/Cadastro"><img id="login" src="imagens/icones/user.png" alt="login"></abbr>
+          <img
+            id="login"
+            src="imagens/icones/user.png"
+            alt="login"
+            title="Login/Cadastro"
+          />
         </div>
-      </header>
-      <nav id="linha">
-            <a href="index.html">Início</a>
-            <a href="institucional.html">Institucional</a>
-            <a href="duvidas.html">Dúvidas</a>
-            <a href="" onclick="aviso()">Provas</a>
+      </div>
+      <nav>
+        <a href="index.html" class="selected">Início</a>
+        <a href="institucional.html">Institucional</a>
+        <a href="duvidas.html">Dúvidas</a>
+        <a href="" onclick="aviso()">Provas</a>
       </nav>
-      <!-- Telinha de login/cadastro -->
-      <div id="vis-modal" class="modal">
-        <div class="conteudo-modal">
-            <div class="cabecalho-modal">
-                <img src="Imagens/icones/fechar.png" alt="butão-fechar" class="fechar-modal" onclick="fecharModal('vis-modal')">
-                <img src="Imagens/icones/Logo(oficial)menor.png" alt="logo" class="logo-btn">
-            </div>
-            <div class="corpo-modal">
-              <form action="TesteLogin.php" method="POST">
-                <p class="login-modal">LOGIN:</p>
-                <div class="input-login" id="area-email">
-                  <input type="text" placeholder=" " name="email" required>
-                  <label for="email">E-mail:</label>
-                </div>
-                <br>
-                <div class="input-login" id="area-senha">
-                  <input type="password" placeholder=" " name="senha" required>
-                  <label for="senha">Senha:</label>
-                </div>
-                  <p>Login como:</p>
-                  <input type="radio" name="usuario" value="professor" checked class="radiobt"><label for="professor">Professor</label> &nbsp; &nbsp; &nbsp;
-                  <input type="radio" name="usuario" value="aluno" class="radiobt"><label for="aluno">Aluno</label>
-                  <br>
-                  <input name="submit" type="submit" value="ENTRAR" class="entrar-btn">
-              </form>
-              
-                <p><a href="recuperar-senha.html">Esqueceu a senha?</a></p>
-                <br>
-                <p>É novo por aqui? <a href="cadastro00.html">Cadastre-se</a></p>
-            </div>
-        </div>
-        </div>
-      <!-- Container do conteúdo principal -->
-      <main>
-        <!-- Carrossel kkkkkk -->
-        <div class="container-slider">
-          <button id="prev-button"><img src="imagens/imgs-slide/pngwing.com.png" alt="prev-button"></button>
-          <div class="container-images">
-              <img src="imagens/imgs-slide/slide1.png" alt="slide1" class="slider on" onclick="ir()">
-              <img src="imagens/imgs-slide/slide2.png" alt="slide2" class="slider" id="img2">
-                <img src="imagens/imgs-slide/slide3.png" alt="slide3" class="slider" id="img3">
-          </div>
-          <button id="next-button"><img src="imagens/imgs-slide/pngwing.com.png" alt="next-button"></button>
-        </div>
-        <!-- Texto -->
-        <h1>Olá, caro usuário</h1>
-        <p>Inicialmente, seja muito bem-vindo ao nosso ambiente de estudos. Aqui, você poderá adquirir, desenvolver, ampliar e avaliar os seus conhecimentos como desejar. Faça seu <a href="#" onclick="abrirModal('vis-modal')">Login</a> ou se é novo por aqui, <a href="cadastro00.html">Cadastre-se</a>.</p>
-        <p>O site oferecerá um conjunto de ferramentas necessárias no qual você, que esteja cadastrado como aluno, poderá fazer da sua experiência a mais proveitosa possivel, acompanhando seu progresso de aprendizado e melhorando conhecimentos.</p>
-        <p>Para você que será um usuário professor, reservamos ferramentas que lhe auxilie a gerenciar e trabalhar de uma maneira agradável.</p>
-        <p>Nós, da equipe <strong>Estuda.Já</strong>, agradecemos a sua preferência pelo que podemos oferecer em nosso site.</p>
-      </main>
-      <!-- Rodapé -->
-      <footer>
-        <div id="linha2"></div>
-        <picture>
-          <source media="(max-width: 768px)" srcset="imagens/logo/bonecoestudaja2-p.png">
-          <source media="(max-width: 1024px)" srcset="imagens/logo/bonecoestudaja2-m.png">
-          <source media="(max-width: 1367px)" srcset="imagens/logo/bonecoestudaja2-mg.png">
-          <img src="imagens/logo/bonecoestudaja2.png" alt="a">
-        </picture>
-      
-            <ul>
-              <li><strong class="titulo"><ins>Início</ins></strong></li>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="institucional.html">Institucional</a></li>
-              <li><a href="duvidas.html">Dúvidas</a></li>
+    </header>
 
-              
-              <li><strong class="titulo" id="suporte"><ins>Suporte</ins></strong></li>
-              <li><a href="duvidas.html">FAQ</a></li>
-              <li><a href="email.html.html">E-mail</a></li>
-              <li><a href="duvidas.html">Chat</a></li>
-            </ul>
-        <div id="linharp"></div>
+    <div id="vis-modal" class="modal">
+      <div class="conteudo-modal">
+        <div class="cabecalho-modal">
+          <img
+            src="Imagens/icones/fechar.png"
+            alt="butão-fechar"
+            class="fechar-modal"
+            onclick="fecharModal('vis-modal')"
+          />
+          <img
+            src="Imagens/icones/Logo(oficial)menor.png"
+            alt="logo"
+            class="logo-btn"
+          />
+        </div>
+        <div class="corpo-modal">
+          <form action="PHP/TesteLogin.php" method="POST">
+            <p class="login-modal">LOGIN:</p>
+            <div class="input-login" id="area-email">
+              <input type="text" placeholder=" " name="email" required />
+              <label for="email">E-mail:</label>
+            </div>
+            <br />
+            <div class="input-login" id="area-senha">
+              <input type="password" placeholder=" " name="senha" required />
+              <label for="senha">Senha:</label>
+            </div>
+            <p>Login como:</p>
+            <input
+              type="radio"
+              name="usuario"
+              value="professor"
+              checked
+              class="radiobt"
+            /><label for="professor">Professor</label> &nbsp; &nbsp; &nbsp;
+            <input
+              type="radio"
+              name="usuario"
+              value="aluno"
+              class="radiobt"
+            /><label for="aluno">Aluno</label>
+            <br />
+            <input
+              name="submit"
+              type="submit"
+              value="ENTRAR"
+              class="entrar-btn"
+            />
+          </form>
+          <p><a href="recuperar-senha.php">Esqueceu a senha?</a></p>
+          <br />
+          <p>É novo por aqui? <a href="cadastro00.html">Cadastre-se</a></p>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container-slider">
+        <button id="prev-button">
+          <img src="imagens/imgs-slide/pngwing.com.png" alt="prev-button" />
+        </button>
+        <div class="container-images">
+          <img
+            src="imagens/imgs-slide/slide1.png"
+            alt="slide1"
+            class="slider on"
+            onclick="ir()"
+          />
+          <img
+            src="imagens/imgs-slide/slide2.png"
+            alt="slide2"
+            class="slider"
+            id="img2"
+          />
+          <img
+            src="imagens/imgs-slide/slide3.png"
+            alt="slide3"
+            class="slider"
+            id="img3"
+          />
+        </div>
+        <button id="next-button">
+          <img src="imagens/imgs-slide/pngwing.com.png" alt="next-button" />
+        </button>
+      </div>
+      <h1>Olá, caro usuário</h1>
+      <p>
+        Inicialmente, seja muito bem-vindo ao nosso ambiente de estudos. Aqui,
+        você poderá adquirir, desenvolver, ampliar e avaliar os seus
+        conhecimentos como desejar. Faça seu
+        <a href="#" onclick="abrirModal('vis-modal')">Login</a> ou se é novo por
+        aqui, <a href="cadastro00.html">Cadastre-se</a>.
+      </p>
+      <p>
+        O site oferecerá um conjunto de ferramentas necessárias no qual você,
+        que esteja cadastrado como aluno, poderá fazer da sua experiência a mais
+        proveitosa possivel, acompanhando seu progresso de aprendizado e
+        melhorando conhecimentos.
+      </p>
+      <p>
+        Para você que será um usuário professor, reservamos ferramentas que lhe
+        auxilie a gerenciar e trabalhar de uma maneira agradável.
+      </p>
+      <p>
+        Nós, da equipe <strong>Estuda.Já</strong>, agradecemos a sua preferência
+        pelo que podemos oferecer em nosso site.
+      </p>
+    </main>
+    <footer>
+      <div id="linha2"></div>
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="imagens/logo/bonecoestudaja2-p.png"
+        />
+        <source
+          media="(max-width: 1024px)"
+          srcset="imagens/logo/bonecoestudaja2-m.png"
+        />
+        <source
+          media="(max-width: 1367px)"
+          srcset="imagens/logo/bonecoestudaja2-mg.png"
+        />
+        <img src="imagens/logo/bonecoestudaja2.png" alt="a" />
+      </picture>
+      <div class="content">
+        <div class="col1">
+          <strong class="titulo"><ins>Início</ins></strong>
+          <a href="institucional.html">Institucional</a>
+          <a href="duvidas.html">Dúvidas</a>
+        </div>
+        <div class="col2">
+          <strong class="titulo" id="suporte"><ins>Suporte</ins></strong>
+          <a href="duvidas.html">FAQ</a>
+          <a href="email.html.html">E-mail</a>
+        </div>
+      </div>
+      <div id="linharp">
         <p id="frasef">© 2023 Copyright - TechnoLords</p>
-      </footer>
+      </div>
+    </footer>
     <!-- Área de scripts -->
     <script src="JS/javascript.js"></script>
-</body>
+  </body>
 </html>
