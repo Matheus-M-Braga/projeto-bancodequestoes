@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/style.css" media="all" />
-    <!-- <link rel="stylesheet" href="CSS/mediaquery.css" /> -->
+    <link rel="stylesheet" href="css/style.css" media="all" />
+    <!-- <link rel="stylesheet" href="css/mediaquery.css" /> -->
     <link
       rel="shortcut icon"
-      href="imagens/icones/favicon.ico"
+      href="img/icons/favicon.ico"
       type="image/x-icon"
     />
     <link
@@ -17,16 +17,16 @@
     />
     <title>Estuda.ja</title>
   </head>
-  <body onresize="mudaTamanho()">
+  <body>
     <header>
       <div class="header_top">
         <a href="#" id="logo-oficial">
-          <img src="imagens/logo/logo-oficial-g.png" alt="" />
+          <img src="img/logo/logo-oficial-g.png" alt="" />
         </a>
-        <div id="login-btn" onclick="abrirModal('vis-modal')">
+        <div id="login_btn">
           <img
             id="login"
-            src="imagens/icones/user.png"
+            src="img/icons/user.png"
             alt="login"
             title="Login/Cadastro"
           />
@@ -36,21 +36,21 @@
         <a href="index.html" class="selected">Início</a>
         <a href="institucional.html">Institucional</a>
         <a href="duvidas.html">Dúvidas</a>
-        <a href="" onclick="aviso()">Provas</a>
+        <a href="" id="tests_link">Provas</a>
       </nav>
     </header>
 
-    <div id="vis-modal" class="modal">
+    <div id="modal" class="modal">
       <div class="conteudo-modal">
         <div class="cabecalho-modal">
           <img
-            src="Imagens/icones/fechar.png"
+            src="img/icons/fechar.png"
             alt="butão-fechar"
+            id="close_modal"
             class="fechar-modal"
-            onclick="fecharModal('vis-modal')"
           />
           <img
-            src="Imagens/icones/Logo(oficial)menor.png"
+            src="img/icons/Logo(oficial)menor.png"
             alt="logo"
             class="logo-btn"
           />
@@ -72,7 +72,6 @@
               type="radio"
               name="usuario"
               value="professor"
-              checked
               class="radiobt"
             /><label for="professor">Professor</label> &nbsp; &nbsp; &nbsp;
             <input
@@ -99,30 +98,25 @@
     <main>
       <div class="container-slider">
         <button id="prev-button">
-          <img src="imagens/imgs-slide/pngwing.com.png" alt="prev-button" />
+          <img src="img/img_slide/pngwing.com.png" alt="prev-button" />
         </button>
         <div class="container-images">
+          <img src="img/img_slide/slide1.png" alt="slide1" class="slider on" />
           <img
-            src="imagens/imgs-slide/slide1.png"
-            alt="slide1"
-            class="slider on"
-            onclick="ir()"
-          />
-          <img
-            src="imagens/imgs-slide/slide2.png"
+            src="img/img_slide/slide2.png"
             alt="slide2"
             class="slider"
             id="img2"
           />
           <img
-            src="imagens/imgs-slide/slide3.png"
+            src="img/img_slide/slide3.png"
             alt="slide3"
             class="slider"
             id="img3"
           />
         </div>
         <button id="next-button">
-          <img src="imagens/imgs-slide/pngwing.com.png" alt="next-button" />
+          <img src="img/img_slide/pngwing.com.png" alt="next-button" />
         </button>
       </div>
       <h1>Olá, caro usuário</h1>
@@ -148,22 +142,23 @@
         pelo que podemos oferecer em nosso site.
       </p>
     </main>
+
     <footer>
       <div id="linha2"></div>
       <picture>
         <source
           media="(max-width: 768px)"
-          srcset="imagens/logo/bonecoestudaja2-p.png"
+          srcset="img/logo/bonecoestudaja2-p.png"
         />
         <source
           media="(max-width: 1024px)"
-          srcset="imagens/logo/bonecoestudaja2-m.png"
+          srcset="img/logo/bonecoestudaja2-m.png"
         />
         <source
           media="(max-width: 1367px)"
-          srcset="imagens/logo/bonecoestudaja2-mg.png"
+          srcset="img/logo/bonecoestudaja2-mg.png"
         />
-        <img src="imagens/logo/bonecoestudaja2.png" alt="a" />
+        <img src="img/logo/bonecoestudaja2.png" alt="a" />
       </picture>
       <div class="content">
         <div class="col1">
@@ -181,7 +176,8 @@
         <p id="frasef">© 2023 Copyright - TechnoLords</p>
       </div>
     </footer>
-    <!-- Área de scripts -->
-    <script src="JS/javascript.js"></script>
+
+    <!-- javascript -->
+    <script src="js/script.js"></script>
   </body>
 </html>

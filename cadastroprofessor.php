@@ -1,7 +1,6 @@
 <?php
-include_once('PHP/Config.php');
+include_once('php/Config.php');
 if (isset($_POST['submit'])) {
-    
 
     $nome = $_POST['nome'];
     $sobrenome = $_POST['sobrenome'];
@@ -11,20 +10,23 @@ if (isset($_POST['submit'])) {
     $confirmsenha = $_POST['confirmsenha'];
     $materia = $_POST['materia'];
 
-        if($materia == 0){
-            echo"<script> alert('Atenção! Selecione uma matéria para prosseguir.') 
-                window.location.href = 'cadastroprofesso.php';
-                </script>";
-        }
-        else{
-            mysqli_query($conexao, "INSERT INTO professor(nome, sobrenome, email, cpf, senha, confirmsenha, materia) VALUES ('$nome','$sobrenome','$email','$cpf','$senha','$confirmsenha','$materia')");
+    if ($materia == 0) {
+        echo
+        "<script> 
+            alert('Atenção! Selecione uma matéria para prosseguir.') 
+            window.location.href = 'cadastroprofesso.php';
+        </script>";
+    } else {
+        mysqli_query($conexao, "INSERT INTO professor(nome, sobrenome, email, cpf, senha, confirmsenha, materia) VALUES ('$nome','$sobrenome','$email','$cpf','$senha','$confirmsenha','$materia')");
 
-            mysqli_query($conexao, "ALTER TABLE bancoquest_bd.professor AUTO_INCREMENT = 1;");
+        mysqli_query($conexao, "ALTER TABLE bancoquest_bd.professor AUTO_INCREMENT = 1;");
 
-            echo"<script> alert('Cadastro realizado com sucesso!') 
-                window.location.href = 'index.html';
-                </script>";
-        }
+        echo
+        "<script> 
+            alert('Cadastro realizado com sucesso!') 
+            window.location.href = 'index.html';
+        </script>";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -34,15 +36,16 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/cadastro.css?<?php echo rand(1, 1000); ?>" media="all">
-    <link rel="stylesheet" href="CSS/mediaquery-cadast.css?<?php echo rand(1, 1000); ?>">
-    <link rel="shortcut icon" href="imagens/icones/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/cadastro.css?<?php echo rand(1, 1000); ?>" media="all">
+    <link rel="stylesheet" href="css/mediaquery-cadast.css?<?php echo rand(1, 1000); ?>">
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
     <title>Cadastro do Professor</title>
 </head>
+
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="imagens/imgparacadastro.png" alt="negro apontando para logo">
+            <img src="img/imgparacadastro.png" alt="negro apontando para logo">
         </div>
         <div class="form">
             <form action="cadastroprofesso.php" method="POST">
@@ -50,7 +53,9 @@ if (isset($_POST['submit'])) {
                     <div class="title">
                         <h1>Cadastre-se</h1>
                     </div>
-                    <a href="cadastro00.html"><div class="login-button"><button type="button">Voltar</button></div></a>
+                    <a href="cadastro00.html">
+                        <div class="login-button"><button type="button">Voltar</button></div>
+                    </a>
                 </div>
 
                 <div class="input-group" id="inputs-prof">
