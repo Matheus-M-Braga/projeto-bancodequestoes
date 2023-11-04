@@ -8,7 +8,7 @@ if (login_btn && close_modal && login_modal) {
   });
   close_modal.addEventListener("click", function () {
     login_modal.classList.remove("visible");
-  });.
+  });
 }
 
 // Slideshow
