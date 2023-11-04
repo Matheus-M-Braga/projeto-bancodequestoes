@@ -1,5 +1,6 @@
 // Login modal
 const login_btn = document.getElementById("login_btn");
+const login_link = document.getElementById("login_link");
 const close_modal = document.getElementById("close_modal");
 const login_modal = document.getElementById("modal");
 if (login_btn && close_modal && login_modal) {
@@ -8,6 +9,9 @@ if (login_btn && close_modal && login_modal) {
   });
   close_modal.addEventListener("click", function () {
     login_modal.classList.remove("visible");
+  });
+  login_link.addEventListener("click", function () {
+    login_modal.classList.add("visible");
   });
 }
 

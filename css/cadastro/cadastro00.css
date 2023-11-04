@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap");
+
+:root {
+  --azul_escuro: rgb(19, 51, 76);
+  --azul_claro: rgb(0, 106, 186);
+  --branco: rgb(246, 246, 233);
+  --laranja: rgb(207, 87, 23);
+  --laranja-claro: rgb(255, 112, 35);
+}
+
+body {
+  background-image: url(img/fundoquedabom.jpg);
+  overflow: hidden;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+.top {
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+}
+main#main-escolha {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #000000;
+  padding: 30px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1#h1-escolha {
+  margin-top: 25px;
+  text-align: center;
+}
+.botoes {
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn00 {
+  /* margin-left:160px; */
+  padding: 20px;
+  width: 130px;
+  background-color: white;
+  border: 1px solid var(--azul_claro);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn01 {
+  /* margin-left: 20px; */
+  padding: 20px;
+  width: 130px;
+  background-color: white;
+  border: 1px solid var(--azul_claro);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn00:hover,
+.btn01:hover {
+  background-color: var(--azul_claro);
+  color: white;
+  transition: 0.5s;
+}
+.login-button {
+}
+.login-button button {
+  color: white;
+  border: none;
+  background-color: #cf5717;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-button button:hover {
+  background-color: #cf5717;
+}
+.login-button button a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
