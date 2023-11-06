@@ -23,13 +23,13 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
             $_SESSION['id'] = $id;
-            header('Location: ../area-prof/inicio.php');
+            header('Location: ../area-prof/view/inicio.php');
         } else {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
             echo "<script> 
                 alert('Usuário inexistente.'); 
-                window.location.href = '../index.html';
+                window.location.href = '../index.php';
                 </script>
             ";
         }
@@ -49,14 +49,14 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             unset($_SESSION['senha']);
             echo "<script> 
                 alert('Usuário inexistente.'); 
-                window.location.href = '../index.html';
+                window.location.href = '../index.php';
                 </script>
             ";
         }
     } else {
         echo "<script> 
         alert('Usuário inexistente.'); 
-        window.location.href = '../index.html';
+        window.location.href = '../index.php';
         </script>
         ";
     }
@@ -64,7 +64,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
 else {
     echo "<script> 
         alert('Usuário inexistente.'); 
-        window.location.href = '../index.html';
+        window.location.href = '../index.php';
         </script>
     ";
 }
