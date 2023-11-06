@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/fundoquedabom.jpg);
+  background-image: url(../../img/fundoquedabom.jpg);
 }
 input {
   outline: 0;

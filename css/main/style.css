@@ -24,7 +24,7 @@ input:focus {
 
 body,
 html {
-  background-image: url(../img/fundoquedabom.jpg);
+  background-image: url(../../img/fundoquedabom.jpg);
   background-size: cover;
   overflow-x: hidden;
 }
