@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 <body>
    <main>
       <h1>Recuperação de senha</h1>
-      <a href="index.html">
+      <a href="index.php">
          <div class="login-button"><button type="button">Voltar</button></div>
       </a>
       <hr>
