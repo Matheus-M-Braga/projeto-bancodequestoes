@@ -1,13 +1,13 @@
 <!DOCTYPE html5>
 <html lang="pt-br">
 <?php
-include("components/main/head.html");
+include("components/main/head.php");
 ?>
 
 <body>
   <?php
-  include("components/main/header.html");
-  include("components/main/modalLogin.html");
+  include("components/main/header.php");
+  include("components/main/modalLogin.php");
   ?>
   <main>
     <div class="container-slider">
@@ -29,7 +29,7 @@ include("components/main/head.html");
       você poderá adquirir, desenvolver, ampliar e avaliar os seus
       conhecimentos como desejar. Faça seu
       <a href="javascript:void(0)" disabled id="login_link">Login</a> ou se é novo por
-      aqui, <a href="cadastro00.html">Cadastre-se</a>.
+      aqui, <a href="cadastro00.php">Cadastre-se</a>.
     </p>
     <p>
       O site oferecerá um conjunto de ferramentas necessárias no qual você,
@@ -47,8 +47,8 @@ include("components/main/head.html");
     </p>
   </main>
   <?php
-  include("components/main/footer.html");
-  include("components/main/scripts.html");
+  include("components/main/footer.php");
+  include("components/main/scripts.php");
   ?>
 </body>
 

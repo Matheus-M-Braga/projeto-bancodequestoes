@@ -10,9 +10,11 @@ if (login_btn && close_modal && login_modal) {
   close_modal.addEventListener("click", function () {
     login_modal.classList.remove("visible");
   });
-  login_link.addEventListener("click", function () {
-    login_modal.classList.add("visible");
-  });
+  if (login_link) {
+    login_link.addEventListener("click", function () {
+      login_modal.classList.add("visible");
+    });
+  }
 }
 
 // Slideshow
