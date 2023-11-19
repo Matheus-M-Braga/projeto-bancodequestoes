@@ -1,19 +1,17 @@
-<?php 
+<?php
 
-$dbhost = 'localhost';
+$dbhost = 'localhost:3312';
 $dbUsername = 'root';
 $dbPassword = 'admin';
-$dbName ='bancoquest_bd';
+$dbName = 'bancoquest_bd';
 
-$conexao = new mysqli($dbhost,$dbUsername,$dbPassword,$dbName);
+$conexao = new mysqli($dbhost, $dbUsername, $dbPassword, $dbName);
 
 /* if($conexao->connect_errno){
     echo "erro";
 }else{
     echo "Deu Bom";
 } */
-if($conexao -> error){
-    die("Falha ao conectar ao Banco de dados: " .$conexao->error);
+if ($conexao->error) {
+    die("Falha ao conectar ao Banco de dados: " . $conexao->error);
 }
-
-?>

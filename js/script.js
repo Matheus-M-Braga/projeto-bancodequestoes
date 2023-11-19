@@ -3,6 +3,9 @@ const login_btn = document.getElementById("login_btn");
 const login_link = document.getElementById("login_link");
 const close_modal = document.getElementById("close_modal");
 const login_modal = document.getElementById("modal");
+const cadast_btn = document.getElementById("cadast_btn");
+const cadast_choice_close = document.getElementById("close_cadast_choice");
+const cadast_choice = document.getElementById("cadast_choice");
 if (login_btn && close_modal && login_modal) {
   login_btn.addEventListener("click", function () {
     login_modal.classList.add("visible");
@@ -13,6 +16,17 @@ if (login_btn && close_modal && login_modal) {
   if (login_link) {
     login_link.addEventListener("click", function () {
       login_modal.classList.add("visible");
+    });
+  }
+  if (cadast_btn && cadast_choice) {
+    cadast_btn.addEventListener("click", function () {
+      cadast_choice.classList.add("visible");
+    });
+    cadast_choice_close.addEventListener("click", function () {
+      cadast_choice.classList.remove("visible");
+    });
+    cadast_choice.addEventListener("click", function () {
+      cadast_choice.classList.remove("visible");
     });
   }
 }

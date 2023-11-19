@@ -5,7 +5,7 @@
 :root {
   --azul_escuro: rgb(19, 62, 94);
   --azul_claro: rgb(0, 106, 186);
-  --branco: rgb(246, 246, 233);
+  --branco: #f6f6e9;
   --laranja: rgb(207, 87, 23);
   --laranja-claro: rgb(255, 112, 35);
 }
@@ -63,8 +63,13 @@ nav a {
   color: var(--branco);
 }
 
+nav a:hover {
+  text-decoration: underline;
+  color: #f6f6e9d0;
+  transition: 300ms ease-in-out;
+}
+
 nav a.selected {
-  font-style: oblique;
   font-weight: 600;
 }
 
@@ -72,11 +77,20 @@ nav a.selected {
   cursor: pointer;
 }
 
+#login:hover {
+  transition: 300ms ease-in-out;
+  transform: scale(1.1);
+}
+
 /* ModalLogin */
 .modal {
   background-color: rgba(71, 71, 71, 0.719);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1px);
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100vw;
@@ -87,40 +101,51 @@ nav a.selected {
 }
 
 .visible {
-  opacity: 1;
-  z-index: 3;
-  transition: 200ms ease;
+  opacity: 1 !important;
+  z-index: 3 !important;
+  transition: 200ms ease !important;
 }
 
 .conteudo-modal {
-  margin-top: 120px;
-  max-width: 400px;
+  width: 400px;
   height: 600px;
   background-color: #fff;
   border-radius: 10px;
-  margin: auto;
 }
 
 .cabecalho-modal {
   background-color: #cf5717;
   height: 110px;
-  margin-top: 35px;
   border-radius: 10px 10px 0px 0px;
   border-bottom: solid #af4d18 11px;
-  justify-content: space-between;
 }
 
-.logo-btn {
-  position: relative;
-  margin-top: 40px;
-  margin-left: 79px;
+.close_modal {
+  display: flex;
+  padding: 10px;
+  justify-content: end;
 }
 
 .fechar-modal {
-  position: absolute;
-  margin-top: 12px;
-  margin-left: 370px;
   cursor: pointer;
+}
+
+.fechar-modal:hover {
+  transition: 300ms ease-in-out;
+  transform: scale(1.1);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.modal_title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-right: 3px;
+  padding-bottom: 40px;
 }
 
 .corpo-modal {
@@ -129,8 +154,9 @@ nav a.selected {
   border-top: 1px solid #eee;
 }
 
-.corpo-modal p {
-  margin-bottom: -5px;
+.corpo-modal span {
+  display: block;
+  margin-bottom: 3px;
 }
 
 .corpo-modal a {
@@ -140,32 +166,6 @@ nav a.selected {
 
 .corpo-modal a:hover {
   text-decoration: underline;
-}
-
-.login-modal {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 30px;
-  text-align: center;
-  margin-right: 3px;
-  padding-bottom: 40px;
-}
-
-.entrar-btn {
-  background-color: #fff;
-  color: #006aba;
-  width: 160px;
-  height: 80px;
-  border: 2px solid #006aba;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  transition: 0.4s;
-  margin-bottom: 80px;
-}
-
-.entrar-btn:hover {
-  background-color: #006aba;
-  color: #fff;
 }
 
 .input-login {
@@ -220,12 +220,98 @@ div#area-email {
 
 div#area-senha {
   margin-top: -5px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 input[type="submit"] {
   margin-top: 10px;
   margin-bottom: 15px;
+}
+
+.radio_login {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.entrar-btn {
+  background-color: #fff;
+  color: #006aba;
+  width: 160px;
+  height: 80px;
+  border: 2px solid #006aba;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-bottom: 80px;
+}
+
+.entrar-btn:hover {
+  background-color: #006aba;
+  color: #fff;
+}
+
+div#cadast_choice {
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1.5px);
+  width: 100vw;
+  height: 100vh;
+  margin-top: -95px;
+  opacity: 0;
+  z-index: -3;
+  transition: 900ms ease-out;
+}
+
+div.cadast_choice .top {
+  display: flex;
+  justify-content: end;
+  margin-bottom: -15px;
+}
+
+div.cadast_choice {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #000000;
+  padding: 30px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+}
+
+div.cadast_choice h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+div.cadast_choice .botoes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.cadast_choice .btn00,
+div.cadast_choice .btn01 {
+  padding: 20px;
+  width: 130px;
+  background-color: white;
+  border: 1px solid var(--azul_claro);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+div.cadast_choice .btn00:hover,
+div.cadast_choice .btn01:hover {
+  background-color: var(--azul_claro);
+  color: white;
+  transition: 0.5s;
 }
 
 /* Main */
@@ -319,7 +405,7 @@ footer {
   background-color: var(--laranja);
   color: black;
   border: none;
-  height: 20vh;
+  height: 18vh;
   font-size: 16px;
 }
 

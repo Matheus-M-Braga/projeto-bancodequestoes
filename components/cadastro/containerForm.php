@@ -3,12 +3,12 @@
           <img src="img/imgparacadastro.png" alt="negro apontando para logo">
      </div>
      <div class="form">
-          <form action="<?php echo $currentPage?>" method="POST">
+          <form action="<?php echo $currentPage ?>" method="POST">
                <div class="form-header">
                     <div class="title">
                          <h1>Cadastre-se</h1>
                     </div>
-                    <a href="cadastro00.html">
+                    <a href="cadastro00.php">
                          <div class="login-button"><button type="button">Voltar</button></div>
                     </a>
                </div>
@@ -39,7 +39,7 @@
                          <input id="confirmsenha" type="password" name="confirmsenha" placeholder="Digite sua senha novamente" required>
                     </div>
                </div>
-               <?php echo $ownPart;?>   
+               <?php echo $ownPart; ?>
                <div class="continue-button">
                     <input name="submit" type="submit" value="Continuar">
                </div>

@@ -8,6 +8,7 @@ include("components/main/head.php");
   <?php
   include("components/main/header.php");
   include("components/main/modalLogin.php");
+  include("components/main/cadast_choice.php");
   ?>
   <main>
     <section class="faq_header">
