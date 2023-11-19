@@ -1,3 +1,16 @@
+// Outro
+const tests_link = document.getElementById("tests_link");
+if (tests_link) {
+  tests_link.addEventListener("click", function () {
+    Swal.fire({
+      title: false,
+      text: "Esteja logado para conferir o catálogo de provas!",
+      icon: "warning",
+      confirmButtonText: "Entendo",
+    });
+  });
+}
+
 // Login modal
 const login_btn = document.getElementById("login_btn");
 const login_link = document.getElementById("login_link");
@@ -63,14 +76,6 @@ if (slider && btnPrev && btnNext) {
       currentSlide--;
     }
     showSlider();
-  });
-}
-
-// Outros
-const tests_link = document.getElementById("tests_link");
-if (tests_link) {
-  tests_link.addEventListener("click", function () {
-    alert("Para conferir o catágolo de Questões, esteja logado!!!");
   });
 }
 

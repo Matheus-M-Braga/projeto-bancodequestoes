@@ -35,6 +35,11 @@ a {
   color: var(--azul_escuro);
 }
 
+/* Sweetalert */
+.swal2-shown.swal2-height-auto {
+  padding-right: 0 !important;
+}
+
 /* Header */
 header {
   display: flex;
