@@ -13,50 +13,45 @@ include("components/main/head.php");
   <main>
     <section class="faq_header">
       <h1 class="faq_title">Como podemos ajudar?</h1>
-      <input type="search" name="searchTopic" id="" class="faq_searchbar">
+      <input type="text" name="searchTopic" id="faq_searchbar" class="faq_searchbar">
     </section>
     <section class="centralizer">
-        <h2>Principais tópicos de ajuda</h2>
-      <div class="help_topics">
-        <div>
-          <h3>Como alterar configurações de usúario?</h3>
-          <span>Através do acesso a aba editar perfil,o usuário poderá realizar as devidas mudanças nos dados que achar necessário.Isso não afetará o login da respectiva conta utilizada como também o uso de ferramentas no site.</span>
-        </div>
-        <div>
-          <h3>Quantas matérias um professor pode ter?</h3>
-          <span>Um usuário professor poderá ter disponível quantas matérias desejar.Ele poderá adicionar novas matérias ao longo do uso do site,necessitando apenas dos dados de login necessários.</span>
-        </div>
-        <div>
-          <h3>Como cadastrar novas questões?</h3>
-          <span>Acessando a aba de provas o usuário professor terá disponível as avaliações já criadas, podendo então para cada prova adicionar novas questões. Ele terá disponível somente o repertório de questões da sua área de ensino.</span>
-        </div>
-        <div>
-          <h3>Como ter acesso as informações dos alunos?</h3>
-          <span>Essa é uma ferramenta disponível somente ao usuário professor. Este deverá inserir suas informações de login como email, senha, cpf e código de turma necessárias na aba minha turma.</span>
-        </div>
-        <div>
-          <h3>Como alterar configurações de usúario?</h3>
-          <span>Através do acesso a aba editar perfil,o usuário poderá realizar as devidas mudanças nos dados que achar necessário.Isso não afetará o login da respectiva conta utilizada como também o uso de ferramentas no site.</span>
-        </div>
-        <div>
-          <h3>Quantas matérias um professor pode ter?</h3>
-          <span>Um usuário professor poderá ter disponível quantas matérias desejar.Ele poderá adicionar novas matérias ao longo do uso do site,necessitando apenas dos dados de login necessários.</span>
-        </div>
-        <div>
-          <h3>Como cadastrar novas questões?</h3>
-          <span>Acessando a aba de provas o usuário professor terá disponível as avaliações já criadas, podendo então para cada prova adicionar novas questões. Ele terá disponível somente o repertório de questões da sua área de ensino.</span>
-        </div>
-        <div>
-          <h3>Como ter acesso as informações dos alunos?</h3>
-          <span>Essa é uma ferramenta disponível somente ao usuário professor. Este deverá inserir suas informações de login como email, senha, cpf e código de turma necessárias na aba minha turma.</span>
-        </div>
-      </div>
+      <h2>Principais tópicos de ajuda</h2>
+      <div class="help_topics" id="search_results"></div>
     </section>
   </main>
   <?php
   include("components/main/footer.php");
   include("components/main/scripts.php");
   ?>
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        url: "php/searchFAQ.php",
+        method: "POST",
+        success: function(data) {
+          $("#search_results").html(data);
+        }
+      });
+      $("#faq_searchbar").on("input", function() {
+        var searchValue = $(this).val();
+        $.ajax({
+          url: "php/searchFAQ.php",
+          method: "POST",
+          data: {
+            searchTopic: searchValue
+          },
+          success: function(data) {
+            if (data.trim() === "") {
+              $("#search_results").html("<div><h3 style='text-align: center;'>Sem resultados</h3></div>");
+            } else {
+              $("#search_results").html(data);
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
