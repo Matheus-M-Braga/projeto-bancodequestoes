@@ -44,10 +44,9 @@ a {
   font-family: 'Roboto', sans-serif !important;
   font-size: 1.1em !important;
 }
-
-.swal2-confirm.swal_btn.swal2-styled {
-  background-color: #006aba;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+.swal2-confirm.swal2-styled {
+  background-color: #006aba !important;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Header */
@@ -279,7 +278,7 @@ div#cadast_choice {
   margin-top: -95px;
   opacity: 0;
   z-index: -3;
-  transition: 900ms ease-out;
+  transition: 300ms ease-out;
 }
 
 div.cadast_choice .top {
@@ -401,16 +400,19 @@ main p {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: 300ms ease-out;
+}
+
+#prev-button:hover,
+#next-button:hover {
+  transform: scale(1.1);
+  transition: 300ms ease-in;
 }
 
 #prev-button img,
 #next-button img {
   width: 80%;
   height: 80%;
-}
-
-#prev-button {
-  transform: rotate(180deg);
 }
 
 /* Footer */

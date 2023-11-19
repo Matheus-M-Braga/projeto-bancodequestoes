@@ -8,7 +8,7 @@
                     <div class="title">
                          <h1>Cadastre-se</h1>
                     </div>
-                    <a href="cadastro00.php">
+                    <a href="javascript:history.back()">
                          <div class="login-button"><button type="button">Voltar</button></div>
                     </a>
                </div>

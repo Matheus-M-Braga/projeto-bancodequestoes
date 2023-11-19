@@ -13,7 +13,7 @@ include("components/main/head.php");
   <main>
     <div class="container-slider">
       <button id="prev-button">
-        <img src="img/img_slide/pngwing.com.png" alt="prev-button" />
+        <img src="img/img_slide/prev.png" alt="prev-button" />
       </button>
       <div class="container-images">
         <img src="img/img_slide/slide1.png" alt="slide1" class="slider on" />
@@ -21,7 +21,7 @@ include("components/main/head.php");
         <img src="img/img_slide/slide3.png" alt="slide3" class="slider" id="img3" />
       </div>
       <button id="next-button">
-        <img src="img/img_slide/pngwing.com.png" alt="next-button" />
+        <img src="img/img_slide/next.png" alt="next-button" />
       </button>
     </div>
     <h1>Olá, caro usuário</h1>
@@ -30,7 +30,7 @@ include("components/main/head.php");
       você poderá adquirir, desenvolver, ampliar e avaliar os seus
       conhecimentos como desejar. Faça seu
       <a href="javascript:void(0)" disabled id="login_link">Login</a> ou se é novo por
-      aqui, <a href="cadastro00.php">Cadastre-se</a>.
+      aqui, <a href="javascript:void(0)" id="cadast_btn2">Cadastre-se</a>.
     </p>
     <p>
       O site oferecerá um conjunto de ferramentas necessárias no qual você,
