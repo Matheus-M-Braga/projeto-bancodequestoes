@@ -40,6 +40,16 @@ a {
   padding-right: 0 !important;
 }
 
+.swal2-html-container {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 1.1em !important;
+}
+
+.swal2-confirm.swal_btn.swal2-styled {
+  background-color: #006aba;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+}
+
 /* Header */
 header {
   display: flex;
