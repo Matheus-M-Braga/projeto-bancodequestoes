@@ -31,24 +31,20 @@ include("components/cadastro/head.php");
     <?php
     $currentPage = "cadastroaluno.php";
     $ownPart = "
-    <div class='grade-inputs'>
-        <div class='gender-title'>
-            <h6>Turma</h6>
-        </div>
-        <div class='gender-group'>
-            <div class='gender-input'>
-                <input id='female' type='radio' name='serie' value='1º ano'>
+    <div class='input-box grade-inputs'>
+        <label>Turma</label>
+        <div class='grade-group'>
+            <div class='grade-input'>
+                <input id='1ano' type='radio' name='serie' value='1º ano'>
                 <label for='female'>1°ano</label>
             </div>
-
-            <div class='gender-input'>
-                <input id='male' type='radio' name='serie' value='2º ano'>
-                <label for='male'>2°ano</label>
+            <div class='grade-input'>
+                <input id='2ano' type='radio' name='serie' value='2º ano'>
+                <label for='2ano'>2°ano</label>
             </div>
-
-            <div class='gender-input'>
-                <input id='others' type='radio' name='serie' value='3º ano'>
-                <label for='others'>3°ano</label>
+            <div class='grade-input'>
+                <input id='3ano' type='radio' name='serie' value='3º ano'>
+                <label for='3ano'>3°ano</label>
             </div>
         </div>
     </div>";

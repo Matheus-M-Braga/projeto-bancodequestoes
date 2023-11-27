@@ -40,7 +40,7 @@ include("components/cadastro/head.php");
     <?php
     $currentPage = "cadastroprofessor.php";
     $ownPart = "
-    <div class='input-box' id='materia'>
+    <div class='input-box select-box' id='materia'>
         <label for='materia'>Matéria</label>
         <select name='materia' id='materia'>
             <option selected disabled value='0'>Selecionar</option>

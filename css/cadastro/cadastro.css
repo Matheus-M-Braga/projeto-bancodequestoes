@@ -1,11 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
 body {
   width: 100%;
   overflow-x: hidden;
@@ -15,30 +17,35 @@ body {
   align-items: center;
   background-image: url(../../img/fundoquedabom.jpg);
 }
+
 input {
   outline: 0;
   border: none;
 }
+
 .container {
   width: 80%;
+  min-height: 510px;
   display: flex;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.212);
 }
+
 .form-image {
   width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .form-image img {
   width: 100%;
   height: 100%;
   border-radius: 8px 0px 0px 8px;
   backdrop-filter: blur(4px);
 }
+
 .form {
   width: 55%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,19 +55,16 @@ input {
   border-radius: 0px 8px 8px 0px;
   backdrop-filter: blur(4px);
 }
-.form-header {
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-.login-button {
+
+.backward-button {
   position: absolute;
   top: 5px;
   right: 5px;
   display: flex;
   align-items: center;
 }
-.login-button button {
+
+.backward-button button {
   color: white;
   border: none;
   background-color: #cf5717;
@@ -68,14 +72,23 @@ input {
   border-radius: 5px;
   cursor: pointer;
 }
-.login-button button:hover {
+
+.backward-button button:hover {
   background-color: #cf5717;
 }
-.login-button button a {
+
+.backward-button button a {
   text-decoration: none;
   font-weight: 500;
   color: #fff;
 }
+
+.form-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 .form-header h1::after {
   content: "";
   display: block;
@@ -86,21 +99,25 @@ input {
   position: absolute;
   border-radius: 10px;
 }
+
 .input-group {
   display: grid;
   grid-template-columns: 200px auto;
   column-gap: 8px;
   justify-content: space-between;
 }
+
 #inputs-prof {
   column-gap: 45px;
 }
+
 .input-box {
   display: flex;
   width: 200px;
   flex-direction: column;
   margin-bottom: 1.1rem;
 }
+
 .input-box input,
 select {
   width: 100%;
@@ -111,50 +128,59 @@ select {
   box-shadow: 1px 1px 6px #0000001c;
   font-size: 0.8rem;
 }
-.input-box select {
-  width: 223%;
-}
+
 .input-box input:hover,
 select:hover {
   background-color: #7575755d;
 }
+
 .input-box input:focus {
   outline: 0.2px solid #cf5717;
 }
+
 .input-box label,
-.gender-title h6 {
-  font-size: 0.75rem;
+.grade-input label {
+  font-size: 0.80rem;
   font-weight: 600;
   color: #000000c0;
 }
+
 .input-box input::placeholder {
   color: #000000be;
 }
+
+.select-box {
+  width: 100%;
+}
+
 .grade-inputs {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
-.gender-group {
+
+.grade-inputs input,
+.grade-inputs input:focus {
+  outline: 0;
+  cursor: pointer;
+}
+
+.grade-group {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 0.62rem;
-  /* padding-left: 15px; */
 }
-.gender-group div {
-  margin-right: 100px;
-}
-.gender-input {
+
+.grade-input {
   display: flex;
   align-items: center;
 }
-.gender-input input {
+
+.grade-input input {
   margin-right: 0.35rem;
 }
-.gender-input label {
-  font-size: 0.81rem;
-  font-weight: 600;
-  color: black;
-}
+
 .continue-button input {
   width: 100%;
   color: white;
@@ -164,9 +190,11 @@ select:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .continue-button input:hover {
   background-color: #cf5717;
 }
+
 .continue-button input a {
   text-decoration: none;
   font-size: 0.93rem;

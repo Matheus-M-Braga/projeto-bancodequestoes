@@ -9,7 +9,7 @@
                          <h1>Cadastre-se</h1>
                     </div>
                     <a href="javascript:history.back()">
-                         <div class="login-button"><button type="button">Voltar</button></div>
+                         <div class="backward-button"><button type="button">Voltar</button></div>
                     </a>
                </div>
                <div class="input-group">
