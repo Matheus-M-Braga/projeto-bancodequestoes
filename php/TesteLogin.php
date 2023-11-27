@@ -43,7 +43,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
             $_SESSION['id'] = $id;
-            header('Location: ../area-aluno/inicio.php');
+            header('Location: ../area-aluno/view/inicio.php');
         } else {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
