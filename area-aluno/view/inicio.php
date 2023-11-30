@@ -1,34 +1,18 @@
 <?php
 session_start();
 include_once('../../PHP/Config.php');
-
-// Teste da seção
-if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location: ../index.html');
-} else {
-    $email = $_SESSION['email'];
-    $senha = $_SESSION['senha'];
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-
-    $user_data = mysqli_fetch_assoc($result);
-    $nome = $user_data['nome'];
-    $serie = $user_data['serie'];
-
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-}
+include_once('../components/test_session.php');
 ?>
 <!DOCTYPE html5>
 <html lang="pt-br">
 <?php
-include("../../components/areas/head.php");
+include_once('../components/head.php');
 ?>
 
 <body>
     <?php
-    include("../../components/areas/header.php");
+    $current_page = "inicio.php";
+    include_once('../components/header.php');
     ?>
     <main>
         <!-- Relatório de provas -->
@@ -98,9 +82,6 @@ include("../../components/areas/head.php");
         <h2>Informática Básica</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque inventore labore perferendis suscipit molestiae minima beatae. Eveniet unde corrupti pariatur deleniti, sequi ducimus est ad? Corrupti dicta nisi numquam eligendi?</p>
     </main>
-    <!-- Área de scripts -->
-    <input type="hidden" name="id" value="<?php echo $id; ?>">
-    <script src="JS/Perfil.js"></script>
 </body>
 
 </html>

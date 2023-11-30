@@ -1,34 +1,18 @@
 <?php
 session_start();
 include_once('../../PHP/Config.php');
-
-// Teste da seção
-if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location: ../index.html');
-} else {
-    $email = $_SESSION['email'];
-    $senha = $_SESSION['senha'];
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-
-    $user_data = mysqli_fetch_assoc($result);
-    $nome = $user_data['nome'];
-    $serie = $user_data['serie'];
-
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-}
+include_once('../components/test_session.php');
 ?>
 <!DOCTYPE html5>
 <html lang="pt-br">
 <?php
-include("../../components/areas/head.php");
+include_once('../components/head.php');
 ?>
 
 <body>
     <?php
-    include("../../components/areas/header.php");
+    $current_page = "ajuda.php";
+    include_once('../components/header.php');
     ?>
     <main>
         <h1 id="tituloduv">Dúvidas</h1>
@@ -41,8 +25,6 @@ include("../../components/areas/head.php");
         <h2 class="h2-duvidas">4. Como ter acesso as informações dos alunos?</h2>
         <p class="p-duvidas">Essa é uma ferramenta disponível somente ao usuário professor. Este deverá inserir suas informações de login como email, senha, cpf e código de turma necessárias na aba minha turma.</p>
     </main>
-    <!-- Área de scripts -->
-    <script src="JS/Perfil.js"></script>
 </body>
 
 </html>

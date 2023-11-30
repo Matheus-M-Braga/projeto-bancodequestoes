@@ -1,38 +1,20 @@
 <?php
 session_start();
 include_once('../../PHP/Config.php');
-
-// Teste da seção
-if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location: ../index.html');
-} else {
-    $email = $_SESSION['email'];
-    $senha = $_SESSION['senha'];
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-
-    $user_data = mysqli_fetch_assoc($result);
-    $nome = $user_data['nome'];
-    $serie = $user_data['serie'];
-
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-}
-
-
+include_once('../components/test_session.php');
 $resultPova = mysqli_query($conexao, "SELECT * FROM provas");
 
 ?>
 <!DOCTYPE html5>
 <html lang="pt-br">
 <?php
-include("../../components/areas/head.php");
+include_once('../components/head.php');
 ?>
 
 <body>
     <?php
-    include("../../components/areas/header.php");
+    $current_page = "provas.php";
+    include_once('../components/header.php');
     ?>
     <main id="main-provas">
         <div class="container-pai">
@@ -71,15 +53,13 @@ include("../../components/areas/head.php");
                     echo "<div class='questoes-entrada'>
                         <h1>" . $prova_data['nome'] . "</h1>
                         <p>vai encarar ???!!?!?</p><br>
-                        <a href='fazeraprova.php?id=$id'><div class='ver-btn'>Resolver agora</div>
+                        <a href='../fazeraprova.php?id=$id'><div class='ver-btn'>Resolver agora</div>
                         </div></a>";
                 }
                 ?>
             </div>
         </div>
     </main>
-    <!-- Área de scripts -->
-    <script src="JS/Perfil.js"></script>
 </body>
 
 </html>

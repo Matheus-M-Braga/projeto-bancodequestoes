@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../PHP/Config.php");
+include_once("../../php/Config.php");
     
 if (isset($_POST['Mudar'])) {
     $id = $_POST["id"];

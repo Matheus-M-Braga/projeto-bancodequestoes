@@ -1,36 +1,18 @@
 <?php
 session_start();
 include_once('../../PHP/Config.php');
-
-// Teste da seção
-if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location: ../index.html');
-} else {
-    $email = $_SESSION['email'];
-    $senha = $_SESSION['senha'];
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-
-    $user_data = mysqli_fetch_assoc($result);
-    $nome = $user_data['nome'];
-    $serie = $user_data['serie'];
-    $id = $user_data['id_aluno'];
-
-    $result = mysqli_query($conexao, "SELECT * FROM aluno WHERE email = '$email' OR senha = '$senha' OR id_aluno = '$id'");
-    $resultTurma = mysqli_query($conexao, "SELECT * FROM aluno WHERE serie = '$serie' ORDER BY nome");
-}
+include_once('../components/test_session.php');
 ?>
 <!DOCTYPE html5>
 <html lang="pt-br">
 <?php
-include("../../components/areas/head.php");
+include_once('../components/head.php');
 ?>
 
 <body>
     <?php
-    include("../../components/areas/header.php");
+    $current_page = "minha_turma.php";
+    include_once('../components/header.php');
     ?>
     <main>
         <h1>Turma: <?php echo $serie; ?></h1>
@@ -65,8 +47,6 @@ include("../../components/areas/head.php");
             ?>
         </div>
     </main>
-    <!-- Área de scripts -->
-    <script src="JS/Perfil.js"></script>
 </body>
 
 </html>
