@@ -58,7 +58,7 @@ include_once('../components/head.php');
                       <option value='2º ano' selected>2º ano</option>
                       <option value='3º ano'>3º ano</option>
                       ";
-                } else if ($serie === "3º ano") {
+                }  else if ($serie === "3º ano") {
                   echo "
                       <option value='1º ano'>1º ano</option>
                       <option value='2º ano'>2º ano</option>
