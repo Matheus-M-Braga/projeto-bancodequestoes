@@ -50,35 +50,24 @@ a.selected {
 
 /* cabeçalho */
 header {
-    height: 80px;
+    display: flex;
+    justify-content: space-between;
     padding: 13px;
-    border: 1px solid var(--laranja);
     background-color: var(--laranja);
 }
 
 div#login-user {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 28px;
-    left: 1%;
-    cursor: pointer;
-    display: flex;
     background-repeat: no-repeat;
 }
 
 #texto-user {
-    position: absolute;
-    width: 200px;
-    height: 68px;
-    top: -10px;
-    left: 10px;
     color: white;
 }
 
 nav {
-    height: fit-content;
-    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
     width: 100%;
     background-color: #aa4d1c;
 }
@@ -87,25 +76,30 @@ nav a {
     text-decoration: none;
     display: inline;
     font-size: 18px;
-    margin: 0px 86px 0px 158px;
     color: white;
-    padding: 8px;
 }
 
 nav a:hover {
-    text-decoration: none;
-    background-color: rgba(228, 92, 2, 0.678);
-    height: 20px;
-    width: 200px;
+    text-decoration: underline;
     border-radius: 6px;
 }
 
-#burguer {
-    display: none;
+a#sair {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-#burguer_open {
-    display: none;
+.sair {
+    padding: 7px 30px;
+    background: maroon;
+    border-radius: 5px;
+    color: white;
+}
+
+.sair:hover {
+    background: rgb(168, 0, 0);
+    transition: 300ms ease-in;
 }
 
 /* Corpo */
@@ -263,14 +257,16 @@ input.buttons-form {
     border: 1px solid gray;
     cursor: pointer;
 }
-.container_title{
+
+.container_title {
     margin-bottom: 25px;
 }
-.mini_title{
+
+.mini_title {
     font-size: 1.7em;
 }
 
-.title{
+.title {
     font-size: 2em;
     font-weight: bold;
 }
@@ -290,25 +286,6 @@ input.buttons-form {
     display: flex;
     justify-content: center;
     gap: 15px;
-}
-
-#sair-btn {
-    margin-left: 0px;
-    margin-top: 0px;
-    border: none;
-    width: 80px;
-    height: 40px;
-    border-radius: 8px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(196, 40, 40);
-    cursor: pointer;
-}
-
-div#sair {
-    width: 80px;
-    height: 40px;
-    margin-left: 93%;
-    margin-top: 20px;
 }
 
 /* Minha turma */
