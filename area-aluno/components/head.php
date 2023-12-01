@@ -5,5 +5,6 @@
      <link rel="stylesheet" href="../../css/areas/area.css" media="all">
      <link rel="stylesheet" href="../../css/areas/mediaqueray-area.css">
      <link rel="shortcut icon" href="../../img/icons/favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
      <title>Estuda.ja</title>
 </head>

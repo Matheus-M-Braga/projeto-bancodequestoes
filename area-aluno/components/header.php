@@ -10,9 +10,9 @@
           </div>
      </div>
      </div>
-     <div id="sair">
-          <a href="../../php/sair.php" id="sair"><input type="submit" value="Sair" id="sair-btn"></a>
-     </div>
+     <a href="../../php/sair.php" id="sair">
+          <div class="sair material-symbols-outlined">logout</div>
+     </a>
 </header>
 <nav id="linha">
      <a href="<?php echo ($current_page == 'editar-perfil.php') ? '../view/' : ''; ?>inicio.php" class="<?php echo ($current_page == 'inicio.php') ? 'selected' : ''; ?>">Início</a>
