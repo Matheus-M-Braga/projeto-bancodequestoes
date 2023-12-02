@@ -66,8 +66,8 @@ div#login-user {
 
 nav {
     display: flex;
-    justify-content: space-around;
-    padding: 10px 20px;
+    justify-content: space-evenly;
+    padding: 7px;
     width: 100%;
     background-color: #aa4d1c;
 }
@@ -109,35 +109,41 @@ main {
     border-radius: 6px;
     width: 80vw;
     margin: 0 auto;
-    padding: 5px;
+    padding: 15px;
     min-height: 83vh;
     overflow: hidden;
 }
 
-main h1 {
-    margin-top: 20px;
-}
-
 /* Início */
 div.grid-dash {
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: rgba(0, 54, 95, 0.798);
+    display: flex;
     border-radius: 5px;
-    padding: 10px;
-    row-gap: 40px;
-    width: 90%;
-    margin: 0 auto;
+    padding: 10px 0;
+}
+
+div.bloco_group {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    width: 100%;
+}
+
+div.bloco_group.second{
+    align-items: end;
 }
 
 div.blocos {
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
     min-height: 230px;
     border: 1px solid gray;
     background-color: var(--branco);
     border-radius: 10px;
     text-align: center;
-    margin: 0 auto;
 }
 
 .num {
@@ -147,7 +153,7 @@ div.blocos {
 }
 
 .ver-btn {
-    box-shadow: inset 0px 1px 3px 0px #91b8b3;
+    box-shadow: 0px 1px 3px 0px #000000;
     background-color: var(--laranja-claro);
     border-radius: 5px;
     display: inline-block;
@@ -159,7 +165,38 @@ div.blocos {
 }
 
 .ver-btn:hover {
-    background-color: var(--laranja-claro);
+    background-color: #aa4d1c;
+    transition: 400ms ease-in-out;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+}
+
+th {
+    border: 1px solid #353535;
+    background: #3c6e71;
+    padding: 10px;
+    color: wheat;
+    text-align: center;
+
+}
+
+tbody {
+    border: 1px solid #353535;
+}
+
+td.long_text {
+    text-align: left;
+}
+
+td {
+    background: #060b0f;
+    padding: 10px;
+    color: wheat;
+    text-align: center;
 }
 
 /* Progressbar */
