@@ -16,50 +16,110 @@ include_once('../components/head.php');
     $current_page = "provas.php";
     include_once('../components/header.php');
     ?>
-    <main id="main-provas">
-        <div class="container-pai">
-            <h1>Provas</h1>
-            <div class="header-provas">
-                <div id="materias">
-                    <h2>Matérias</h2>
-                    <form action="">
-                        <input type="checkbox" name="biologia-check" id="ibiologia">
-                        <label for="ibiologia">Biologia</label><br>
-                        <input type="checkbox" name="biologia-check" id="iinformatica">
-                        <label for="iinformatica">Informática Básica</label><br>
-                        <input type="checkbox" name="biologia-check" id="ihistoria">
-                        <label for="ihistoria">História</label><br>
-                        <input type="checkbox" name="biologia-check" id="ilogica">
-                        <label for="ilogica">Lógica de Programação</label><br>
-                    </form>
-                </div>
-                <div id="dificuldades">
-                    <h2>Dificuldade</h2>
-                    <form action="">
-                        <input type="checkbox" name="biologia-check" id="ifacil">
-                        <label for="ifacil">Fácil</label><br>
-                        <input type="checkbox" name="biologia-check" id="imedio">
-                        <label for="imedio">Médio</label><br>
-                        <input type="checkbox" name="biologia-check" id="idificil">
-                        <label for="idificil">Difícil</label><br>
-                    </form>
+    <main>
+        <div>
+            <div class="header_exams">
+                <input type="text" placeholder="Pesquisar..." name="searchExam" id="exams_searchbar" class="exams_searchbar">
+                <div class="filters">
+                    <div id="series">
+                        <h2>Série</h2>
+                        <form action="">
+                            <input type="checkbox" name="1ano" id="prova" class="checkbox">
+                            <label for="ibiologia">1º ano</label><br>
+                            <input type="checkbox" name="2ano" id="batman" class="checkbox">
+                            <label for="iinformatica">2º ano</label><br>
+                            <input type="checkbox" name="3ano" id="3º ano" class="checkbox">
+                            <label for="ilogica">3º ano</label><br>
+                        </form>
+                    </div>
+                    <div id="dificuldades">
+                        <h2>Dificuldade</h2>
+                        <form action="">
+                            <input type="checkbox" name="Fácil" id="Fácil" class="checkbox">
+                            <label for="Fácil">Fácil</label><br>
+                            <input type="checkbox" name="Médio" id="Médio" class="checkbox">
+                            <label for="Médio">Médio</label><br>
+                            <input type="checkbox" name="Difícil" id="Difícil" class="checkbox">
+                            <label for="Difícil">Difícil</label><br>
+                        </form>
+                    </div>
                 </div>
             </div>
             <br>
-            <div class="questoes-container">
-                <?php
-                while ($prova_data = mysqli_fetch_assoc($resultPova)) {
-                    $id = $prova_data['id'];
-                    echo "<div class='questoes-entrada'>
-                        <h1>" . $prova_data['nome'] . "</h1>
-                        <p>vai encarar ???!!?!?</p><br>
-                        <a href='../fazeraprova.php?id=$id'><div class='ver-btn'>Resolver agora</div>
-                        </div></a>";
-                }
-                ?>
-            </div>
+            <div class="container_exams"></div>
         </div>
     </main>
+    <?php
+    include("../components/scripts.php");
+    ?>
+    <script>
+        $(document).ready(function() {
+            function updateExams(checkboxValues, searchBarValue) {
+                var values = [];
+
+                if (checkboxValues.length > 0) {
+                    values = checkboxValues;
+                }
+
+                if (searchBarValue) {
+                    values.push(searchBarValue);
+                }
+
+                if (values.length > 1) {
+                    for (var counter = 1; counter < values.length; counter++) {
+                        $.ajax({
+                            url: "../../php/searchExams.php",
+                            method: "POST",
+                            data: {
+                                searchExam: values[counter]
+                            },
+                            success: function(data) {
+                                var container = $(".container_exams");
+                                if (data.trim() === "") {
+                                    container.html("<div class='container_exam'><h3 style='text-align: center;'>Sem resultados</h3></div>");
+                                } else {
+                                    container.append(data);
+                                }
+                            }
+                        });
+                    }
+                } else {
+                    $.ajax({
+                        url: "../../php/searchExams.php",
+                        method: "POST",
+                        data: {
+                            searchExam: values[0]
+                        },
+                        success: function(data) {
+                            var container = $(".container_exams");
+                            if (data.trim() === "") {
+                                container.html("<div class='container_exam'><h3 style='text-align: center;'>Sem resultados</h3></div>");
+                            } else {
+                                container.html(data);
+                            }
+                        }
+                    });
+                }
+            }
+
+            updateExams([], "");
+
+            $(".exams_searchbar").on("input", function() {
+                var value = $(this).val();
+                updateExams([], value);
+            });
+
+            $(".checkbox").on("change", function() {
+                var checked = [];
+                $(".checkbox:checked").each(function() {
+                    checked.push($(this).attr("id"));
+                });
+
+                var searchBarValue = $(".exams_searchbar").val();
+                updateExams(checked, searchBarValue);
+            });
+        });
+    </script>
 </body>
 
 </html>

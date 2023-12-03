@@ -31,17 +31,17 @@ include_once('../components/head.php');
           <div>
             <div class="input_area">
               <label for="Nome" class="inputs-text">Nome:</label>
-              <input type="text" placeholder="Nome" id="Nome" value="<?php echo $nome; ?>" name="nome">
+              <input type="text" placeholder="Nome" id="Nome" value="<?php echo $nome; ?>" name="nome" class="input_text">
             </div>
             <div class="input_area">
               <label for="Sobrenome" class="inputs-text">Sobrenome:</label>
-              <input type="text" placeholder="Sobrenome" id="Sobrenome" value="<?php echo $sobrenome; ?>" name="sobrenome">
+              <input type="text" placeholder="Sobrenome" id="Sobrenome" value="<?php echo $sobrenome; ?>" name="sobrenome" class="input_text">
             </div>
           </div>
           <div>
             <div class="input_area">
               <label for="Email" class="inputs-text">Email:</label>
-              <input type="text" placeholder="Email" id="Email" value="<?php echo $email; ?>" name="email"></div>
+              <input type="text" placeholder="Email" id="Email" value="<?php echo $email; ?>" name="email" class="input_text"></div>
             <div class="input_area">
               <label for="Serie" class="inputs-text">Série:</label>
               <select name="serie" id="serie_select">
@@ -71,8 +71,8 @@ include_once('../components/head.php');
           </div>
         </div>
         <div class="buttons">
-          <input type="submit" name="Mudar" value="Mudar" class="buttons-form">
-          <input type="button" value="Limpar" onclick="limparCampos()" class="buttons-form">
+          <input type="submit" name="Mudar" value="Mudar" class="buttons-form input_submit">
+          <input type="button" value="Limpar" onclick="limparCampos()" class="buttons-form input_reset">
         </div>
       </section>
       <section>
@@ -83,16 +83,16 @@ include_once('../components/head.php');
         <div class="input_group">
           <div class="input_area">
             <label for="nSenha">Nova Senha:</label>
-            <input type="password" placeholder="" name="senha" id="senha">
+            <input type="password" placeholder="" name="senha" id="senha" class="input_password">
           </div>
           <div class="input_area">
             <label for="nSenha2">Confirmar nova senha:</label>
-            <input type="password" placeholder="" name="confirmsenha" id="confirmsenha">
+            <input type="password" placeholder="" name="confirmsenha" id="confirmsenha" class="input_password">
           </div>
         </div>
         <div class="buttons">
-          <input type="submit" value="Mudar" class="buttons-form" name="MudarSenha">
-          <input type="button" value="Limpar" onclick="limparCamposSenha()" class="buttons-form">
+          <input type="submit" value="Mudar" class="buttons-form input_submit" name="MudarSenha" >
+          <input type="button" value="Limpar" onclick="limparCamposSenha()" class="buttons-form input_reset">
         </div>
       </section>
     </form>
