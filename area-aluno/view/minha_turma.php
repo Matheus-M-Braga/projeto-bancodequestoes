@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('../../PHP/Config.php');
+include_once('../../php/Config.php');
 include_once('../components/test_session.php');
 ?>
 <!DOCTYPE html5>
@@ -24,10 +24,10 @@ include_once('../components/head.php');
                     echo
                     "<div class='aluno'>
                         <div class='user-img'>
-                            <img src='../imagens/profile.png'>
+                            <img src='../../img/profile.png'>
                         </div>
                         <div class='dados'>
-                            <p>" . $turma_data['nome'] . " " . $turma_data['sobrenome'] . "(Você)</p><br>
+                            <p>" . $turma_data['nome'] . " " . $turma_data['sobrenome'] . " (Você)</p><br>
                             <p>" . $turma_data['email'] . "</p>
                         </div>
                     </div>";
@@ -35,7 +35,7 @@ include_once('../components/head.php');
                     echo
                     "<div class='aluno'>
                         <div class='user-img'>
-                            <img src='../imagens/profile.png'>
+                            <img src='../../img/profile.png'>
                         </div>
                         <div class='dados'>
                             <p>" . $turma_data['nome'] . " " . $turma_data['sobrenome'] . "</p><br>

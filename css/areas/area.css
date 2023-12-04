@@ -307,13 +307,15 @@ div.alunos {
 
 div.aluno {
     border: 1px solid rgb(42, 42, 42);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
     width: 250px;
     display: grid;
     grid-template-columns: 40% 60%;
     border-radius: 10px;
     height: 100px;
-    background-color: rgb(36, 36, 36);
-    color: rgb(255, 255, 255);
+    background-color: rgb(233, 233, 233);
+    color: black;
+    overflow: hidden;
 }
 
 div.dados {
@@ -331,21 +333,6 @@ div.user-img img {
     border-radius: 10px 0px 0px 10px;
     width: 100%;
     height: 95%;
-}
-
-/* FAQ */
-h1#tituloduv {
-    text-indent: 0px;
-}
-
-h2.h2-duvidas {
-    text-indent: 10px;
-
-}
-
-p.p-duvidas {
-    margin-bottom: 15px;
-    text-indent: 0px;
 }
 
 /* UpdateProfilePage */
