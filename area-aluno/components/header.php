@@ -18,5 +18,4 @@
      <a href="<?php echo ($current_page == 'editar-perfil.php') ? '../view/' : ''; ?>inicio.php" class="<?php echo ($current_page == 'inicio.php') ? 'selected' : ''; ?>">Início</a>
      <a href="<?php echo ($current_page == 'editar-perfil.php') ? '../view/' : ''; ?>provas.php" class="<?php echo ($current_page == 'provas.php') ? 'selected' : ''; ?>">Provas</a>
      <a href="<?php echo ($current_page == 'editar-perfil.php') ? '../view/' : ''; ?>minha_turma.php" class="<?php echo ($current_page == 'minha_turma.php') ? 'selected' : ''; ?>">Minha turma</a>
-     <a href="<?php echo ($current_page == 'editar-perfil.php') ? '../view/' : ''; ?>ajuda.php" class="<?php echo ($current_page == 'ajuda.php') ? 'selected' : ''; ?>">Ajuda</a>
 </nav>

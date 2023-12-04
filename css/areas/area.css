@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
 
-/* Configurações gerais */
+/* General */
 :root {
     --azul_escuro: rgb(19, 51, 76);
     --azul_claro: rgb(0, 106, 186);
-    --branco: rgb(246, 246, 233);
+    --branco: whitesmoke;
     --laranja: rgb(207, 87, 23);
     --laranja-claro: rgb(255, 112, 35);
     --background: #ffffff;
@@ -48,7 +48,7 @@ a.selected {
     font-weight: 600;
 }
 
-/* cabeçalho */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -66,8 +66,8 @@ div#login-user {
 
 nav {
     display: flex;
-    justify-content: space-around;
-    padding: 10px 20px;
+    justify-content: space-evenly;
+    padding: 7px;
     width: 100%;
     background-color: #aa4d1c;
 }
@@ -102,42 +102,48 @@ a#sair {
     transition: 300ms ease-in;
 }
 
-/* Corpo */
+/* Main */
 main {
     background-color: rgb(240, 240, 240);
     box-shadow: 5px 0px rgba(0, 0, 0, 0.300), -5px 0 rgba(0, 0, 0, 0.300);
     border-radius: 6px;
     width: 80vw;
     margin: 0 auto;
-    padding: 5px;
+    padding: 15px;
     min-height: 83vh;
     overflow: hidden;
 }
 
-main h1 {
-    margin-top: 20px;
+/* StartPage */
+div.grid-dash {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 0;
 }
 
-/* Início */
-div.grid-dash {
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: rgba(0, 54, 95, 0.798);
-    border-radius: 5px;
-    padding: 10px;
-    row-gap: 40px;
-    width: 90%;
-    margin: 0 auto;
+div.bloco_group {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    width: 100%;
+}
+
+div.bloco_group.second {
+    align-items: end;
 }
 
 div.blocos {
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
     min-height: 230px;
     border: 1px solid gray;
     background-color: var(--branco);
     border-radius: 10px;
     text-align: center;
-    margin: 0 auto;
 }
 
 .num {
@@ -147,7 +153,7 @@ div.blocos {
 }
 
 .ver-btn {
-    box-shadow: inset 0px 1px 3px 0px #91b8b3;
+    box-shadow: 0px 1px 3px 0px #000000;
     background-color: var(--laranja-claro);
     border-radius: 5px;
     display: inline-block;
@@ -159,10 +165,40 @@ div.blocos {
 }
 
 .ver-btn:hover {
-    background-color: var(--laranja-claro);
+    background-color: #aa4d1c;
+    transition: 400ms ease-in-out;
 }
 
-/* Progressbar */
+table {
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+}
+
+th {
+    border: 1px solid #353535;
+    background: #3c6e71;
+    padding: 10px;
+    color: wheat;
+    text-align: center;
+
+}
+
+tbody {
+    border: 1px solid #353535;
+}
+
+td.long_text {
+    text-align: left;
+}
+
+td {
+    background: #060b0f;
+    padding: 10px;
+    color: wheat;
+    text-align: center;
+}
+
 div.container {
     width: 80%;
     text-align: center;
@@ -209,46 +245,137 @@ div.container {
     }
 }
 
-/* Edittar perfil */
-input[type="text"],
-input[type="password"],
-select {
+/* Exams */
+.header_exams {
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    margin-bottom: 25px;
+}
+
+.exams_searchbar,
+.exams_searchbar:focus,
+.exams_searchbar:hover {
+    width: 80%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    background-color: var(--branco);
+}
+
+.container_exams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+    height: 60vh;
+}
+
+.container_exams::-webkit-scrollbar {
+    width: 7px;
+}
+
+.container_exams::-webkit-scrollbar-thumb {
+    background-color: #006aba;
+    border-radius: 5px;
+}
+
+.container_exams::-webkit-scrollbar-track {
+    background: none;
+}
+
+.container_exam {
+    width: 80%;
+    padding: 10px 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: var(--branco);
+}
+
+/* MyClass */
+div.alunos {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    justify-content: start;
+}
+
+div.aluno {
+    border: 1px solid rgb(42, 42, 42);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-radius: 10px;
+    height: 100px;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    overflow: hidden;
+}
+
+div.dados {
+    display: inline-block;
+    padding: 5px;
+    height: 100%;
+}
+
+div.user-img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+div.user-img img {
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    height: 95%;
+}
+
+/* UpdateProfilePage */
+.input_text,
+.input_password,
+.select {
     border-radius: 5px;
     padding: 8px;
     width: 400px;
     border: 1px solid gray;
 }
 
-input[type="text"]:hover,
-input[type="password"]:hover,
-select:hover {
+.input_text:hover,
+.input_password:hover,
+.select:hover {
     background-color: rgba(0, 0, 0, 0.108);
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-select:focus {
+.input_text:focus,
+.input_password:focus,
+.select:focus {
     background-color: rgba(0, 0, 0, 0.108);
 }
 
-input[type="submit"] {
+.input_submit {
     background-color: var(--laranja);
     color: white;
 }
 
-input[type="submit"]:hover {
+.input_submit:hover {
     background-color: var(--laranja-claro);
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
 }
 
-input[type="reset"] {
-    background-color: white;
-}
-
-input[type="reset"]:hover {
-    background-color: red;
+.input_reset {
+    background-color: rgba(128, 0, 0, 0.9);
     color: white;
-    transition: 0.5s;
+}
+
+.input_reset:hover {
+    background-color: rgb(167, 5, 5);
+    color: white;
+    transition: 0.5s ease-in-out;
 }
 
 input.buttons-form {
@@ -286,58 +413,6 @@ input.buttons-form {
     display: flex;
     justify-content: center;
     gap: 15px;
-}
-
-/* Minha turma */
-div.alunos {
-    width: 1000px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    justify-content: start;
-}
-
-div.aluno {
-    border: 1px solid rgb(42, 42, 42);
-    width: 250px;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    border-radius: 10px;
-    height: 100px;
-    background-color: rgb(36, 36, 36);
-    color: rgb(255, 255, 255);
-}
-
-div.dados {
-    display: inline-block;
-    padding: 5px;
-    height: 100%;
-}
-
-div.user-img {
-    height: 100%;
-    border-radius: 10px;
-}
-
-div.user-img img {
-    border-radius: 10px 0px 0px 10px;
-    width: 100%;
-    height: 95%;
-}
-
-/* Ajuda */
-h1#tituloduv {
-    text-indent: 0px;
-}
-
-h2.h2-duvidas {
-    text-indent: 10px;
-
-}
-
-p.p-duvidas {
-    margin-bottom: 15px;
-    text-indent: 0px;
 }
 
 /* pika */
