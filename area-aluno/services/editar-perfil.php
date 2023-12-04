@@ -44,7 +44,7 @@ include_once('../components/head.php');
               <input type="text" placeholder="Email" id="Email" value="<?php echo $email; ?>" name="email" class="input_text"></div>
             <div class="input_area">
               <label for="Serie" class="inputs-text">Série:</label>
-              <select name="serie" id="serie_select">
+              <select name="serie" id="serie_select" class="select">
                 <?php
                 if ($serie === "1º ano") {
                   echo "

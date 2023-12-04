@@ -5,7 +5,7 @@
 :root {
     --azul_escuro: rgb(19, 51, 76);
     --azul_claro: rgb(0, 106, 186);
-    --branco: rgb(246, 246, 233);
+    --branco: whitesmoke;
     --laranja: rgb(207, 87, 23);
     --laranja-claro: rgb(255, 112, 35);
     --background: #ffffff;
@@ -248,23 +248,21 @@ div.container {
 /* Exams */
 .header_exams {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+   justify-content: center;
+   align-items: center;
     margin-bottom: 25px;
 }
 
 .exams_searchbar,
-.exams_searchbar:focus {
+.exams_searchbar:focus,
+.exams_searchbar:hover {
     width: 80%;
     border: 1px solid gray;
     border-radius: 5px;
-    padding: 4px;
-}
-
-.header_exams .filters {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    background-color: var(--branco);
 }
 
 .container_exams {
@@ -273,7 +271,7 @@ div.container {
     align-items: center;
     text-align: center;
     overflow-y: auto;
-    height: 45vh;
+    height: 60vh;
 }
 
 .container_exams::-webkit-scrollbar {
@@ -362,7 +360,7 @@ p.p-duvidas {
 
 .input_text:hover,
 .input_password:hover,
-select:hover {
+.select:hover {
     background-color: rgba(0, 0, 0, 0.108);
 }
 
